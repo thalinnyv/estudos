@@ -11,19 +11,20 @@
 <!-- AULA 01 -->
 <h2>Aula 01 – Por que aprender a pensar? O que temos aqui no curso?</h2>
 
-<!-- LINK DO VIDEO -->
+<!-- LINK DO VIDEO (substitua about:blank pelo url do vídeo) -->
 <iframe
   width="640"
   height="360"
-  src=
+  src="about:blank"
   allowfullscreen>
 </iframe>
 
-<!-- FICHA DE APOIO -->
+<!-- FICHA DE APOIO (substitua about:blank pelo url da ficha) -->
 <iframe
-  src=
+  src="about:blank"
   width="640"
-  height="500">
+  height="500"
+  allowfullscreen>
 </iframe>
 
 <!-- MARCAR SE ASSISTIU A AULA -->
@@ -49,26 +50,31 @@ Próxima aula →
   Aula assistida
 </label>
 
-<p><a href="redação_2024.html">⬅ Voltar aos módulos</a></p>
+<p><a href="redacao_2024.html">⬅ Voltar aos módulos</a></p>
 
 <script>
-function salvar(id) {
-  localStorage.setItem(id, document.getElementById(id).checked);
-}
+document.addEventListener('DOMContentLoaded', () => {
+  function salvar(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    localStorage.setItem(id, el.checked);
+  }
 
-function carregar(id) {
-  document.getElementById(id).checked =
-    localStorage.getItem(id) === "true";
-}
+  function carregar(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.checked = localStorage.getItem(id) === "true";
+  }
 
-carregar("red_mod1_aula1");
-carregar("red_mod1_aula2");
+  carregar("red_mod1_aula1");
+  carregar("red_mod1_aula2");
 
-document.getElementById("red_mod1_aula1")
-  .addEventListener("change", () => salvar("red_mod1_aula1"));
+  const el1 = document.getElementById("red_mod1_aula1");
+  if (el1) el1.addEventListener("change", () => salvar("red_mod1_aula1"));
 
-document.getElementById("red_mod1_aula2")
-  .addEventListener("change", () => salvar("red_mod1_aula2"));
+  const el2 = document.getElementById("red_mod1_aula2");
+  if (el2) el2.addEventListener("change", () => salvar("red_mod1_aula2"));
+});
 </script>
 
 </body>
