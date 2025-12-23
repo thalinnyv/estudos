@@ -10,18 +10,8 @@
 
 <h2>Aula 01 – Como a redação do ENEM será avaliada</h2>
 
-<iframe
-  width="640"
-  height="360"
-  src=
-  allowfullscreen>
-</iframe>
-
-<iframe
-  src=
-  width="640"
-  height="500">
-</iframe>
+<!-- Removi os iframes vazios (src= sem valor causa erro). 
+     Se quiser exibir um vídeo, coloque aqui a URL correta em src="...". -->
 
 <h2>Aula 02 – Competências da Redação do ENEM (Competências 1 e 2)</h2>
 
@@ -32,6 +22,8 @@
   allowfullscreen>
 </iframe>
 
+<!-- Se quiser mostrar um PDF, mantenha o src apontando para o arquivo correto.
+     Certifique-se de que 'ficha_de_apoio_competencias_redacao_enem.pdf' exista no mesmo diretório. -->
 <iframe
   src="ficha_de_apoio_competencias_redacao_enem.pdf"
   width="640"
@@ -39,7 +31,6 @@
   allowfullscreen>
 </iframe>
 
-  
 <p>Vídeo em breve</p>
 <p>Ficha em breve</p>
 
@@ -53,10 +44,12 @@
 <script>
 const id = "red_mod2_aula1";
 const cb = document.getElementById(id);
-cb.checked = localStorage.getItem(id) === "true";
-cb.addEventListener("change", () =>
-  localStorage.setItem(id, cb.checked)
-);
+if (cb) {
+  cb.checked = localStorage.getItem(id) === "true";
+  cb.addEventListener("change", () =>
+    localStorage.setItem(id, String(cb.checked))
+  );
+}
 </script>
 
 </body>
