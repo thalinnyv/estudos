@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>MÓDULO 02 – TABELA DO ENEM</title>
+</head>
+<body>
+
+<h1>MÓDULO 02 – TABELA DO ENEM</h1>
+
+<h2>Aula 01 – Como a redação do ENEM será avaliada</h2>
+
+<p>Vídeo em breve</p>
+<p>Ficha em breve</p>
+
+<label>
+  <input type="checkbox" id="Red_mod2_aula1">
+  Aula assistida
+</label>
+
+<p><a href="Redação_2024.html">⬅ Voltar aos módulos</a></p>
+
+<script>
+const id = "Red_mod2_aula1";
+const cb = document.getElementById(id);
+cb.checked = localStorage.getItem(id) === "true";
+cb.addEventListener("change", () =>
+  localStorage.setItem(id, cb.checked)
+);
+</script>
+
+</body>
+</html>
