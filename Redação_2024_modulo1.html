@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>MÓDULO 01 – COMECE POR AQUI</title>
+</head>
+<body>
+
+<h1>MÓDULO 01 – COMECE POR AQUI</h1>
+
+<!-- AULA 01 -->
+<h2>Aula 01 – Por que aprender a pensar? O que temos aqui no curso?</h2>
+
+<!-- LINK DO VIDEO -->
+<iframe
+  width="640"
+  height="360"
+  src="https://www.youtube.com/embed/bMm0b65PLCQ"
+  allowfullscreen>
+</iframe>
+
+<!-- FICHA DE APOIO -->
+<iframe
+  src="fundamentos_historia.pdf"
+  width="80%"
+  height="500">
+</iframe>
+
+<!-- MARCAR SE ASSISTIU A AULA -->
+<label>
+  <input type="checkbox" id="Red_mod1_aula1">
+  Aula assistida
+</label>
+
+<button onclick="location.href='#aula2'">
+Próxima aula →
+</button>
+
+<hr>
+
+<!-- AULA 02 -->
+<h2 id="aula2">Aula 02 – Como aprender a pensar</h2>
+
+<p>Vídeo em breve</p>
+<p>Ficha em breve</p>
+
+<label>
+  <input type="checkbox" id="Red_mod1_aula2">
+  Aula assistida
+</label>
+
+<p><a href="Redação_2024.html">⬅ Voltar aos módulos</a></p>
+
+<script>
+function salvar(id) {
+  localStorage.setItem(id, document.getElementById(id).checked);
+}
+
+function carregar(id) {
+  document.getElementById(id).checked =
+    localStorage.getItem(id) === "true";
+}
+
+carregar("Red_mod1_aula1");
+carregar("Red_mod1_aula2");
+
+document.getElementById("Red_mod1_aula1")
+  .addEventListener("change", () => salvar("Red_mod1_aula1"));
+
+document.getElementById("Red_mod1_aula2")
+  .addEventListener("change", () => salvar("Red_mod1_aula2"));
+</script>
+
+</body>
+</html>
