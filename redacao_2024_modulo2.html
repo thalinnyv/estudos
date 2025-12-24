@@ -3,128 +3,106 @@
 <head>
   <meta charset="UTF-8">
   <title>MÓDULO 02 – TABELA DO ENEM</title>
-  <style>
-    /* garante que o botão fique abaixo do vídeo e o iframe ocupe bloco */
-    .lesson {
-      margin-bottom: 1.5rem;
-    }
-    .lesson iframe {
-      display: block;
-      max-width: 100%;
-      width: 640px;
-      height: 360px;
-    }
-    .next-btn {
-      display: inline-block; /* inline-block permite centralizar se quiser */
-      margin-top: 0.5rem;
-      padding: 0.4rem 0.8rem;
-      cursor: pointer;
-    }
-
-    /* comportamento de scroll suave ao navegar por âncoras */
-    html {
-      scroll-behavior: smooth;
-    }
-
-    /* opção: centralizar vídeo e botão */
-    .center {
-      max-width: 640px;
-    }
-  </style>
 </head>
 <body>
 
 <h1>MÓDULO 02 – TABELA DO ENEM</h1>
 
-<h2 id="aula1">Aula 01 – Competências da Redação do ENEM (Competências 1 e 2)★★★★★</h2>
+<!-- AULA 01 -->
+<h2> Competências da Redação do ENEM ★★★★★</h2>
 
-  <div class="lesson center" aria-labelledby="comp1">
-    <h3 id="comp1">Competência 1 da redação do enem</h3>
-    <iframe
-      src="https://www.youtube.com/embed/3xkhapUr2L0?si=GqxeMN7pJp8yv1ph"
-      allowfullscreen>
-    </iframe>
+<!-- LINK DO VIDEO (substitua about:blank pelo url do vídeo) -->
+<h3> Competência 1</h3>
+<iframe
+  width="640"
+  height="360"
+  src="https://www.youtube.com/embed/3xkhapUr2L0?si=Z5V3piUH2AjZUO3g"
+  allowfullscreen>
+</iframe>
 
-    <!-- botão colocado abaixo do vídeo -->
-    <button class="next-btn" onclick="location.href='#aula2'">
-      Próxima aula →
-    </button>
-  </div>
 
-  <div class="lesson center" aria-labelledby="comp2">
-    <h3 id="aula2">Competência 2 da redação do enem</h3>
-    <iframe
-      src="https://www.youtube.com/embed/Q7Op-k24IUs?si=lNjuhSiFURsRgq2Q"
-      allowfullscreen>
-    </iframe>
+  <h3> Competência 2</h3>
+<iframe
+  width="640"
+  height="360"
+  src="https://www.youtube.com/embed/Q7Op-k24IUs?si=S1ZoSFfTY4aUPeI5"
+  allowfullscreen>
+</iframe>
 
-    <button class="next-btn" onclick="location.href='#aula3'">
-      Próxima aula →
-    </button>
-  </div>
+  <h3> Competência 3</h3>
+<iframe
+  width="640"
+  height="360"
+  src="https://www.youtube.com/embed/Upq5dPrRI3M?si=LKO6gUCvkGB0Jsug"
+  allowfullscreen>
+</iframe>
 
-  <div class="lesson center" aria-labelledby="comp3">
-    <h3 id="aula3">Competência 3 da redação do enem</h3>
-    <iframe
-      src="https://www.youtube.com/embed/Upq5dPrRI3M?si=R1kXzKBQjHNerjBX"
-      allowfullscreen>
-    </iframe>
 
-    <button class="next-btn" onclick="location.href='#aula4'">
-      Próxima aula →
-    </button>
-  </div>
+    <h3> Competência 4</h3>
+<iframe
+  width="640"
+  height="360"
+  src="https://www.youtube.com/embed/6gpCzpE2F5I?si=QVjuMBF1H3yMDEsS"
+  allowfullscreen>
+</iframe>
 
-  <div class="lesson center" aria-labelledby="comp4">
-    <h3 id="aula4">Competência 4 da redação do enem</h3>
-    <iframe
-      src="https://www.youtube.com/embed/6gpCzpE2F5I?si=2zKVgXXZn9OUXEKa"
-      allowfullscreen>
-    </iframe>
-
-    <button class="next-btn" onclick="location.href='#aula5'">
-      Próxima aula →
-    </button>
-  </div>
-
-  <div class="lesson center" aria-labelledby="comp5">
-    <h3 id="aula5">Competência 5 da redação do enem</h3>
-    <iframe
-      src="https://www.youtube.com/embed/gcMJLrsUu-E?si=Ai3STvDHhJRW-2ux"
-      allowfullscreen>
-    </iframe>
-
-    <!-- Exemplo: se quiser ir para um material de apoio depois desta aula -->
-    <button class="next-btn" onclick="location.href='#ficha'">
-      Ir para Ficha de Apoio →
-    </button>
-  </div>
-
-  <!-- PDF de apoio (alvo: #ficha) -->
-  <div id="ficha" class="lesson center" aria-label="Ficha de apoio">
-    <iframe
-      src="ficha_de_apoio_competencias_da_redacao_do_enem.pdf"
-      allowfullscreen>
-    </iframe>
-  </div>
+  <h3> Competência 5</h3>
+<iframe
+  width="640"
+  height="360"
+  src="https://www.youtube.com/embed/gcMJLrsUu-E?si=XRsDfCFocdG0z7Wr"
+  allowfullscreen>
+</iframe>
+  
+<!-- FICHA DE APOIO (substitua about:blank pelo url da ficha) -->
+<iframe
+  src="FICHA_DE_APOIO_COMO_APRENDER_A_PENSAR.pdf"
+  width="640"
+  height="360"
+  allowfullscreen>
+</iframe>
 
 <br>
+<!-- MARCAR SE ASSISTIU A AULA -->
 <label>
-  <input type="checkbox" id="red_mod2_aula1">
+  <input type="checkbox" id="red_mod1_aula1">
+  Aula assistida
+</label>
+
+<button onclick="location.href='#aula2'">
+Próxima aula →
+</button>
+
+<label>
+  <input type="checkbox" id="red_mod1_aula2">
   Aula assistida
 </label>
 
 <p><a href="redacao_2024.html">⬅ Voltar aos módulos</a></p>
 
 <script>
-const id = "red_mod2_aula1";
-const cb = document.getElementById(id);
-if (cb) {
-  cb.checked = localStorage.getItem(id) === "true";
-  cb.addEventListener("change", () =>
-    localStorage.setItem(id, String(cb.checked))
-  );
-}
+document.addEventListener('DOMContentLoaded', () => {
+  function salvar(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    localStorage.setItem(id, el.checked);
+  }
+
+  function carregar(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.checked = localStorage.getItem(id) === "true";
+  }
+
+  carregar("red_mod1_aula1");
+  carregar("red_mod1_aula2");
+
+  const el1 = document.getElementById("red_mod1_aula1");
+  if (el1) el1.addEventListener("change", () => salvar("red_mod1_aula1"));
+
+  const el2 = document.getElementById("red_mod1_aula2");
+  if (el2) el2.addEventListener("change", () => salvar("red_mod1_aula2"));
+});
 </script>
 
 </body>
