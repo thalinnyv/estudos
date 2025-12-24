@@ -1,103 +1,92 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>MÓDULO 02 – TABELA DO ENEM</title>
-</head>
-<body>
-
-<h1>MÓDULO 02 – TABELA DO ENEM</h1>
-
-<!-- TÍTULO DA AULA -->
-<h2 id="titulo-aula">Competências da Redação do ENEM ★★★★★</h2>
-
-<!-- Vídeos (inicialmente exibindo o primeiro vídeo) -->
-<div id="video-container">
-  <h3>Competência 1</h3>
-  <iframe id="video1" width="640" height="360" src="https://www.youtube.com/embed/3xkhapUr2L0?si=Z5V3piUH2AjZUO3g" allowfullscreen></iframe>
-
-  <h3>Competência 2</h3>
-  <iframe id="video2" width="640" height="360" style="display: none;" src="https://www.youtube.com/embed/Q7Op-k24IUs?si=S1ZoSFfTY4aUPeI5" allowfullscreen></iframe>
-
-  <h3>Competência 3</h3>
-  <iframe id="video3" width="640" height="360" style="display: none;" src="https://www.youtube.com/embed/Upq5dPrRI3M?si=LKO6gUCvkGB0Jsug" allowfullscreen></iframe>
-
-  <h3>Competência 4</h3>
-  <iframe id="video4" width="640" height="360" style="display: none;" src="https://www.youtube.com/embed/6gpCzpE2F5I?si=QVjuMBF1H3yMDEsS" allowfullscreen></iframe>
-
-  <h3>Competência 5</h3>
-  <iframe id="video5" width="640" height="360" style="display: none;" src="https://www.youtube.com/embed/gcMJLrsUu-E?si=XRsDfCFocdG0z7Wr" allowfullscreen></iframe>
-</div>
-
-<!-- Fichas de Apoio (inicialmente a ficha 1 será mostrada) -->
-<div id="ficha-container">
-  <iframe id="ficha1" src="FICHA_DE_APOIO_COMO_APRENDER_A_PENSAR.pdf" width="640" height="360"></iframe>
-  <iframe id="ficha2" src="Competências_da_Redação_do_ENEM_1e2.pdf" width="640" height="360" style="display: none;"></iframe>
-  <iframe id="ficha3" src="Competências_da_Redação_do_ENEM_3.pdf" width="640" height="360" style="display: none;"></iframe>
-  <iframe id="ficha4" src="Competências_da_Redação_do_ENEM_4.pdf" width="640" height="360" style="display: none;"></iframe>
-  <iframe id="ficha5" src="Competências_da_Redação_do_ENEM_5.pdf" width="640" height="360" style="display: none;"></iframe>
-</div>
-
-<br>
-
-<!-- MARCAR SE ASSISTIU A AULA -->
-<label>
-  <input type="checkbox" id="red_mod2_aula1">
-  Aula assistida
-</label>
-
-<!-- Botão de próxima aula -->
-<button id="nextBtn" onclick="nextAula()">Próxima aula →</button>
-
-<p><a href="redacao_2024.html">⬅ Voltar aos módulos</a></p>
-
-<script>
-// Variáveis para controlar as aulas
-let currentAula = 1;
-const totalAulas = 5; // Total de aulas (mude conforme necessário)
-
-function nextAula() {
-  // Esconde o vídeo e a ficha atual
-  document.getElementById(`video${currentAula}`).style.display = 'none';
-  document.getElementById(`ficha${currentAula}`).style.display = 'none';
-
-  // Atualiza a variável para a próxima aula
-  currentAula++;
-
-  if (currentAula > totalAulas) {
-    // Se já tiver chegado na última aula, desabilita o botão
-    document.getElementById("nextBtn").disabled = true;
-    document.getElementById("nextBtn").innerText = "Fim das aulas!";
-    return;
-  }
-
-  // Exibe o próximo vídeo e a ficha
-  document.getElementById(`video${currentAula}`).style.display = 'block';
-  document.getElementById(`ficha${currentAula}`).style.display = 'block';
-
-  // Atualiza o título
-  document.getElementById("titulo-aula").innerText = `Competência ${currentAula}`;
-}
-
-// Carrega o progresso da aula assistida (marcado ou não)
-document.addEventListener('DOMContentLoaded', () => {
-  function salvar(id) {
-    const el = document.getElementById(id);
-    if (!el) return;
-    localStorage.setItem(id, el.checked);
-  }
-
-  function carregar(id) {
-    const el = document.getElementById(id);
-    if (!el) return;
-    el.checked = localStorage.getItem(id) === "true";
-  }
-
-  carregar("red_mod2_aula1");
-  // Adicionar carregamento de outras aulas conforme necessário
-  document.getElementById("red_mod2_aula1").addEventListener("change", () => salvar("red_mod2_aula1"));
-});
-</script>
-
-</body>
+<!DOCTYPE html> 
+<html> 
+  <head>
+    <meta charset="UTF-8">
+    <title>MÓDULO 02 – TABELA DO ENEM</title> 
+  </head> 
+  <body> 
+    <h1>MÓDULO 02 – TABELA DO ENEM</h1>
+    <!-- AULA 01 -->
+    <h2> Competências da Redação do ENEM ★★★★★</h2>
+    <!-- LINK DO VIDEO (substitua about:blank pelo url do vídeo) --> 
+    <h3> Competência 1</h3>
+    <iframe 
+      width="640" 
+      height="360" 
+      src="https://www.youtube.com/embed/3xkhapUr2L0?si=Z5V3piUH2AjZUO3g" 
+      allowfullscreen>
+    </iframe>
+    <h3> Competência 2</h3>
+    <iframe 
+      width="640"
+      height="360" 
+      src="https://www.youtube.com/embed/Q7Op-k24IUs?si=S1ZoSFfTY4aUPeI5" 
+      allowfullscreen>
+    </iframe> 
+    <h3> Competência 3</h3>
+    <iframe 
+      width="640"
+      height="360
+      " src="https://www.youtube.com/embed/Upq5dPrRI3M?si=LKO6gUCvkGB0Jsug" 
+      allowfullscreen>
+    </iframe> 
+    <h3> Competência 4</h3> 
+    <iframe 
+      width="640"
+      height="360" 
+      src="https://www.youtube.com/embed/6gpCzpE2F5I?si=QVjuMBF1H3yMDEsS" 
+      allowfullscreen> 
+    </iframe>
+    <h3> Competência 5</h3>
+    <iframe
+      width="640"
+      height="360"
+      src="https://www.youtube.com/embed/gcMJLrsUu-E?si=XRsDfCFocdG0z7Wr"
+      allowfullscreen> 
+    </iframe>
+    <!-- FICHA DE APOIO (substitua about:blank pelo url da ficha) --> 
+    <iframe
+      src="FICHA_DE_APOIO_COMO_APRENDER_A_PENSAR.pdf"
+      width="640" 
+      height="360"
+      allowfullscreen>
+    </iframe> 
+    <br> 
+    <!-- MARCAR SE ASSISTIU A AULA -->
+    <label> 
+      <input type="checkbox" id="red_mod1_aula1"> Aula assistida
+    </label>
+    <button onclick="location.href='#aula2'">
+      Próxima aula
+    </button>
+    <label> 
+      <input type="checkbox" id="red_mod1_aula2"> 
+      Aula assistida
+    </label>
+    <p><a href="redacao_2024.html">Voltar aos
+      módulos</a></p> 
+    <script> 
+      document.addEventListener('DOMContentLoaded', ()
+        => { 
+          function salvar(id) { 
+            const el = document.getElementById(id);
+            if (!el) return; 
+            localStorage.setItem(id, el.checked);
+          } 
+          function carregar(id) {
+            const el = document.getElementById(id); 
+            if (!el) return; 
+            el.checked = localStorage.getItem(id) === "true"; 
+          } 
+          carregar("red_mod1_aula1");
+          carregar("red_mod1_aula2"); 
+          const el1 = 
+            document.getElementById("red_mod1_aula1");
+          if (el1) el1.addEventListener("change", () =>
+            salvar("red_mod1_aula1"));
+          const el2 = document.getElementById("red_mod1_aula2"); 
+          if (el2) el2.addEventListener("change", () => 
+            salvar("red_mod1_aula2")); }); 
+    </script>
+  </body> 
 </html>
