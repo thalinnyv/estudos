@@ -3,77 +3,111 @@
 <head>
   <meta charset="UTF-8">
   <title>MÓDULO 02 – TABELA DO ENEM</title>
+  <style>
+    /* garante que o botão fique abaixo do vídeo e o iframe ocupe bloco */
+    .lesson {
+      margin-bottom: 1.5rem;
+    }
+    .lesson iframe {
+      display: block;
+      max-width: 100%;
+      width: 640px;
+      height: 360px;
+    }
+    .next-btn {
+      display: inline-block; /* inline-block permite centralizar se quiser */
+      margin-top: 0.5rem;
+      padding: 0.4rem 0.8rem;
+      cursor: pointer;
+    }
+
+    /* comportamento de scroll suave ao navegar por âncoras */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* opção: centralizar vídeo e botão */
+    .center {
+      max-width: 640px;
+    }
+  </style>
 </head>
 <body>
 
 <h1>MÓDULO 02 – TABELA DO ENEM</h1>
 
-<h2>Aula 01 – Competências da Redação do ENEM (Competências 1 e 2)★★★★★</h2>
+<h2 id="aula1">Aula 01 – Competências da Redação do ENEM (Competências 1 e 2)★★★★★</h2>
 
-  <h3>Competência 1 da redação do enem</h3>
-<iframe
-  src="https://www.youtube.com/embed/3xkhapUr2L0?si=GqxeMN7pJp8yv1ph"
-  width="640"
-  height="360"
-  allowfullscreen>
-</iframe>
+  <div class="lesson center" aria-labelledby="comp1">
+    <h3 id="comp1">Competência 1 da redação do enem</h3>
+    <iframe
+      src="https://www.youtube.com/embed/3xkhapUr2L0?si=GqxeMN7pJp8yv1ph"
+      allowfullscreen>
+    </iframe>
 
-  <button onclick="location.href='#aula2'">
-Próxima aula →
-</button>
+    <!-- botão colocado abaixo do vídeo -->
+    <button class="next-btn" onclick="location.href='#aula2'">
+      Próxima aula →
+    </button>
+  </div>
 
-  <h3>Competência 2 da redação do enem</h3>
-<iframe
-  src="https://www.youtube.com/embed/Q7Op-k24IUs?si=lNjuhSiFURsRgq2Q"
-  width="640"
-  height="360"
-  allowfullscreen>
-</iframe>
+  <div class="lesson center" aria-labelledby="comp2">
+    <h3 id="aula2">Competência 2 da redação do enem</h3>
+    <iframe
+      src="https://www.youtube.com/embed/Q7Op-k24IUs?si=lNjuhSiFURsRgq2Q"
+      allowfullscreen>
+    </iframe>
 
-  <button onclick="location.href='#aula3'">
-Próxima aula →
-</button>
+    <button class="next-btn" onclick="location.href='#aula3'">
+      Próxima aula →
+    </button>
+  </div>
 
-<h3>Competência 3 da redação do enem</h3>
-<iframe
-  src="https://www.youtube.com/embed/Upq5dPrRI3M?si=R1kXzKBQjHNerjBX"
-  width="640"
-  height="360"
-  allowfullscreen>
-</iframe>
+  <div class="lesson center" aria-labelledby="comp3">
+    <h3 id="aula3">Competência 3 da redação do enem</h3>
+    <iframe
+      src="https://www.youtube.com/embed/Upq5dPrRI3M?si=R1kXzKBQjHNerjBX"
+      allowfullscreen>
+    </iframe>
 
-  <button onclick="location.href='#aula4'">
-Próxima aula →
-</button>
-  <h3>Competência 4 da redação do enem</h3>
-<iframe
-  src="https://www.youtube.com/embed/6gpCzpE2F5I?si=2zKVgXXZn9OUXEKa"
-  width="640"
-  height="360"
-  allowfullscreen>
-</iframe>
+    <button class="next-btn" onclick="location.href='#aula4'">
+      Próxima aula →
+    </button>
+  </div>
 
-  <button onclick="location.href='#aula5'">
-Próxima aula →
-</button>
+  <div class="lesson center" aria-labelledby="comp4">
+    <h3 id="aula4">Competência 4 da redação do enem</h3>
+    <iframe
+      src="https://www.youtube.com/embed/6gpCzpE2F5I?si=2zKVgXXZn9OUXEKa"
+      allowfullscreen>
+    </iframe>
 
-  <h3>Competência 5 da redação do enem</h3>
-<iframe
-  src="https://www.youtube.com/embed/gcMJLrsUu-E?si=Ai3STvDHhJRW-2ux"
-  width="640"
-  height="360"
-  allowfullscreen>
-</iframe>
-<!-- Se quiser mostrar um PDF, mantenha o src apontando para o arquivo correto.
-     Certifique-se de que 'ficha_de_apoio_competencias_redacao_enem.pdf' exista no mesmo diretório. -->
-<iframe
-  src="ficha_de_apoio_competencias_da_redacao_do_enem.pdf"
-  width="640"
-  height="360"
-  allowfullscreen>
-</iframe>
+    <button class="next-btn" onclick="location.href='#aula5'">
+      Próxima aula →
+    </button>
+  </div>
 
-  
+  <div class="lesson center" aria-labelledby="comp5">
+    <h3 id="aula5">Competência 5 da redação do enem</h3>
+    <iframe
+      src="https://www.youtube.com/embed/gcMJLrsUu-E?si=Ai3STvDHhJRW-2ux"
+      allowfullscreen>
+    </iframe>
+
+    <!-- Exemplo: se quiser ir para um material de apoio depois desta aula -->
+    <button class="next-btn" onclick="location.href='#ficha'">
+      Ir para Ficha de Apoio →
+    </button>
+  </div>
+
+  <!-- PDF de apoio (alvo: #ficha) -->
+  <div id="ficha" class="lesson center" aria-label="Ficha de apoio">
+    <iframe
+      src="ficha_de_apoio_competencias_da_redacao_do_enem.pdf"
+      allowfullscreen>
+    </iframe>
+  </div>
+
 <br>
 <label>
   <input type="checkbox" id="red_mod2_aula1">
