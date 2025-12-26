@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>MÓDULO 04 – <!-- colocar o nome do modulo aqui--> </title>
+</head>
+<body>
+
+<h1>MÓDULO 04 – <!-- colocar o nome do modulo aqui--></h1>
+
+
+  
+                   <!-- AULA 01 -->
+<h2>Aula 01 – <!-- colocar o nome da aula aqui--> </h2>
+  
+
+                    <!-- LINK DO VIDEO -->
+<iframe
+  width="640"
+  height="360"
+  src= <!-- colocar o link do video AQUI ( entre parentese)-->
+  allowfullscreen>
+</iframe>
+  
+
+                     <!-- FICHA DE APOIO  -->
+<iframe
+  src= <!-- colocar o nome do arquivo do pdf AQUI( entre parentese)-->
+  width="640"
+  height="360"
+  allowfullscreen>
+</iframe>
+
+<br>
+              <!-- MARCAR SE ASSISTIU A AULA -->
+<label>
+  <input type="checkbox" id="red_mod4_aula1">
+  Aula assistida
+</label>
+
+<button onclick="location.href='#aula2'">
+Próxima aula →
+</button>
+
+<label>
+  <input type="checkbox" id="red_mod4_aula2">
+  Aula assistida
+</label>
+
+<p><a href="redacao_2024.html">⬅ Voltar aos módulos</a></p>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  function salvar(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    localStorage.setItem(id, el.checked);
+  }
+
+  function carregar(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.checked = localStorage.getItem(id) === "true";
+  }
+
+  carregar("red_mod4_aula1");
+  carregar("red_mod4_aula2");
+
+  const el1 = document.getElementById("red_mod4_aula1");
+  if (el1) el1.addEventListener("change", () => salvar("red_mod4_aula1"));
+
+  const el2 = document.getElementById("red_mod4_aula2");
+  if (el2) el2.addEventListener("change", () => salvar("red_mod4_aula2"));
+});
+</script>
+
+</body>
+</html>
