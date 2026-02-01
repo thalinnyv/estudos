@@ -3,158 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <title>MÓDULO 04 – ESTILÍSTICA</title>
- 
+</head>
+
 <body>
 
-<h1>MÓDULO 04 – ESTILÍSTICA </h1>
+<h1>MÓDULO 04 – ESTILÍSTICA</h1>
 
+<!-- AULA 01 -->
+<h2>Aula 01 – Funções da Linguagem ★★★★★</h2>
 
-  
-                   <!-- AULA 01 -->
-<h2>Aula 01 – Funções da Linguagem ★★★★★ </h2>
-  
+<iframe width="640" height="360"
+src="https://www.youtube.com/embed/xbaj8MIaFx4"
+allowfullscreen></iframe>
 
-                    <!-- LINK DO VIDEO -->
-<iframe
-  width="640"
-  height="360"
-  src="https://www.youtube.com/embed/xbaj8MIaFx4?si=6uOJFyhH2Es-cq4m"
-  allowfullscreen>
-</iframe>
-  
+<p>Ficha em breve</p>
 
-                     <!-- FICHA DE APOIO  -->
-<iframe
-  src=""
-  width="640"
-  height="360"
-  allowfullscreen>
-</iframe>
+<hr>
 
- <!-- AULA 02 -->
-<h2>Aula 02 – Figuras da Linguagem: figuras de som e de palavras ★★★★★ </h2>
-  
+<!-- AULA 02 -->
+<h2>Aula 02 – Figuras da Linguagem: som e palavras ★★★★★</h2>
 
-                    <!-- LINK DO VIDEO -->
-<iframe
-  width="640"
-  height="360"
-  src="https://www.youtube.com/embed/yg4FO7uCw4Y?si=BF-K6i3vJ6IVARY_"
-  allowfullscreen>
-</iframe>
-  
+<iframe width="640" height="360"
+src="https://www.youtube.com/embed/yg4FO7uCw4Y"
+allowfullscreen></iframe>
 
-                     <!-- FICHA DE APOIO  -->
-<iframe
-  src="figuras_linguagem.pdf"
-  width="640"
-  height="360"
-  allowfullscreen>
-</iframe>
+<iframe width="640" height="360"
+src="figuras_linguagem.pdf"></iframe>
 
- <!-- AULA 03 -->
-<h2>Aula 03 – Figuras da Linguagem: figuras de sintaxe ou de construção ★★★★★</h2>
-  
+<hr>
 
-                    <!-- LINK DO VIDEO -->
-<iframe
-  width="640"
-  height="360"
-  src="https://www.youtube.com/embed/8XCwOLyCs-w?si=9KVZKhnpzpPn6tEO"
-  allowfullscreen>
-</iframe>
-  
+<!-- AULA 03 -->
+<h2>Aula 03 – Figuras de sintaxe ★★★★★</h2>
 
-                     <!-- FICHA DE APOIO  -->
-<iframe
-  src="figuras_linguagem.pdf"
-  width="640"
-  height="360"
-  allowfullscreen>
-</iframe>
+<iframe width="640" height="360"
+src="https://www.youtube.com/embed/8XCwOLyCs-w"
+allowfullscreen></iframe>
 
+<iframe width="640" height="360"
+src="figuras_linguagem.pdf"></iframe>
 
-   <!-- AULA 04 -->
-<h2>Aula 04 – Figuras da Linguagem: figuras de pensamento ★★★★★ </h2>
-  
+<hr>
 
-                    <!-- LINK DO VIDEO -->
-<iframe
-  width="640"
-  height="360"
-  src="https://www.youtube.com/embed/zPb0Gz5SmS0?si=SLTvL3Ezr8AaEFbX"
-  allowfullscreen>
-</iframe>
-  
+<!-- AULA 04 -->
+<h2>Aula 04 – Figuras de pensamento ★★★★★</h2>
 
-                     <!-- FICHA DE APOIO  -->
-<iframe
-  src="figuras_linguagem.pdf"
-  width="640"
-  height="360"
-  allowfullscreen>
-</iframe>
+<iframe width="640" height="360"
+src="https://www.youtube.com/embed/zPb0Gz5SmS0"
+allowfullscreen></iframe>
 
- <!-- AULA 05 -->
-<h2>Aula 05 –  Variação Linguística ★★★★★ </h2>
-  
+<iframe width="640" height="360"
+src="figuras_linguagem.pdf"></iframe>
 
-                    <!-- LINK DO VIDEO -->
-<iframe
-  width="640"
-  height="360"
-  src="https://www.youtube.com/embed/DXniAQ0i-bo?si=qKkgPy3E_3GwC23z"
-  allowfullscreen>
-</iframe>
-  
+<hr>
 
-                     <!-- FICHA DE APOIO  -->
-<iframe
-  src="variação_linguística.pdf"
-  width="640"
-  height="360"
-  allowfullscreen>
-</iframe>
+<!-- AULA 05 -->
+<h2>Aula 05 – Variação Linguística ★★★★★</h2>
 
-  
-<br>
-              <!-- MARCAR SE ASSISTIU A AULA -->
-<label>
-  <input type="checkbox" id="red_2025_mod2_aula1">
-  Aula assistida
-</label>
+<iframe width="640" height="360"
+src="https://www.youtube.com/embed/DXniAQ0i-bo"
+allowfullscreen></iframe>
 
-<button onclick="location.href='#aula2'">
-Próxima aula →
-</button>
+<iframe width="640" height="360"
+src="variacao_linguistica.pdf"></iframe>
 
-
-<p><a href="redacao_2025.html">⬅ Voltar aos módulos</a></p>
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  function salvar(id) {
-    const el = document.getElementById(id);
-    if (!el) return;
-    localStorage.setItem(id, el.checked);
-  }
-
-  function carregar(id) {
-    const el = document.getElementById(id);
-    if (!el) return;
-    el.checked = localStorage.getItem(id) === "true";
-  }
-
-  carregar("red_mod2_aula1");
-  carregar("red_mod2_aula2");
-
-  const el1 = document.getElementById("red_2025_mod2_aula1");
-  if (el1) el1.addEventListener("change", () => salvar("red_2025_mod2_aula1"));
-
-  const el2 = document.getElementById("red_mod2_aula2");
-  if (el2) el2.addEventListener("change", () => salvar("red_2025_mod2_aula2"));
-});
-</script>
+<p><a href="gramatica.html">⬅ Voltar aos módulos</a></p>
 
 </body>
 </html>
