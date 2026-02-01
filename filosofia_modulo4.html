@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>MÓDULO 04 – ANTROPOLOGIA FILOSÓFICA E ÉTICA</title>
+</head>
+<body>
+
+<h1>MÓDULO 04 – ANTROPOLOGIA FILOSÓFICA E ÉTICA</h1>
+
+
+  
+                   <!-- AULA 01 -->
+<h2>Aula 01 –  Antropologia filosófica: cultura e linguagem ★★★☆☆</h2>
+  
+
+                    <!-- LINK DO VIDEO -->
+<iframe
+  width="640"
+  height="360"
+  src="https://www.youtube.com/embed/78sMSK8jUw4?si=2eBrDkeHfu2B4K7v"
+  allowfullscreen>
+</iframe>
+  
+
+                     <!-- FICHA DE APOIO  -->
+<iframe
+  src="antropologia.pdf"
+  width="640"
+  height="360"
+  allowfullscreen>
+</iframe>
+
+ <!-- AULA 02 -->
+<h2>Aula 02 –  Antropologia filosófica: trabalho e ócio ★★★★★</h2>
+  
+
+                    <!-- LINK DO VIDEO -->
+<iframe
+  width="640"
+  height="360"
+  src="https://www.youtube.com/embed/j32GZy4XCrA?si=1_Zxohj2qjrhkKFd"
+  allowfullscreen>
+</iframe>
+  
+
+                     <!-- FICHA DE APOIO  -->
+<iframe
+  src="antropologia_ócio.pdf"
+  width="640"
+  height="360"
+  allowfullscreen>
+</iframe>
+
+ <!-- AULA 03 -->
+<h2>Aula 03 – Introdução à Ética ★★★★★ </h2>
+  
+
+                    <!-- LINK DO VIDEO -->
+<iframe
+  width="640"
+  height="360"
+  src="https://www.youtube.com/embed/-EFDZ56RZZA?si=mMiqBjSu_EYfDdP8"
+  allowfullscreen>
+</iframe>
+  
+
+                     <!-- FICHA DE APOIO  -->
+<iframe
+  src="introdução_etica.pdf"
+  width="640"
+  height="360"
+  allowfullscreen>
+</iframe>
+
+
+   <!-- AULA 04 -->
+<h2>Aula 04 – Filosofia Moral: Utilitarismo e Imperativo Categórico ★★★★★ </h2>
+  
+
+                    <!-- LINK DO VIDEO -->
+<iframe
+  width="640"
+  height="360"
+  src="https://www.youtube.com/embed/4SRbsjbOLqc?si=prIMORFnsUWM7NEP"
+  allowfullscreen>
+</iframe>
+  
+
+                     <!-- FICHA DE APOIO  -->
+<iframe
+  src="filosofia_moral.pdf"
+  width="640"
+  height="360"
+  allowfullscreen>
+</iframe>
+
+
+<br>
+              <!-- MARCAR SE ASSISTIU A AULA -->
+<label>
+  <input type="checkbox" id="red_2025_mod2_aula1">
+  Aula assistida
+</label>
+
+<button onclick="location.href='#aula2'">
+Próxima aula →
+</button>
+
+
+
+<p><a href="redacao_2025.html">⬅ Voltar aos módulos</a></p>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  function salvar(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    localStorage.setItem(id, el.checked);
+  }
+
+  function carregar(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.checked = localStorage.getItem(id) === "true";
+  }
+
+  carregar("red_mod2_aula1");
+  carregar("red_mod2_aula2");
+
+  const el1 = document.getElementById("red_2025_mod2_aula1");
+  if (el1) el1.addEventListener("change", () => salvar("red_2025_mod2_aula1"));
+
+  const el2 = document.getElementById("red_mod2_aula2");
+  if (el2) el2.addEventListener("change", () => salvar("red_2025_mod2_aula2"));
+});
+</script>
+
+</body>
+</html>
