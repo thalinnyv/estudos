@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>MÓDULO 04 – IDADE MODERNA</title>
+</head>
+<body>
+
+<h1>MÓDULO 04 – IDADE MODERNA</h1>
+
+
+  
+                   <!-- AULA 01 -->
+<h2>Aula 01 – Renascimento Cultural ★★★☆☆</h2>
+  
+
+                    <!-- LINK DO VIDEO -->
+<iframe
+  width="640"
+  height="360"
+  src="https://www.youtube.com/embed/TByeZCfzX_s?si=Qk6VhEyDLYGH2aTl"
+  allowfullscreen>
+</iframe>
+  
+
+                     <!-- FICHA DE APOIO  -->
+<iframe
+  src="renascimento_cultural.pdf"
+  width="640"
+  height="360"
+  allowfullscreen>
+</iframe>
+
+ <!-- AULA 02 -->
+<h2>Aula 02 – Reforma Protestante (Parte 1): Antecedentes e Luteranismo ★★★★★</h2>
+  
+
+                    <!-- LINK DO VIDEO -->
+<iframe
+  width="640"
+  height="360"
+  src="https://www.youtube.com/embed/JsVJr6fJfu0?si=QiAGGDKKylrVRfF6"
+  allowfullscreen>
+</iframe>
+  
+
+                     <!-- FICHA DE APOIO  -->
+<iframe
+  src="reforma_protestante_parte1.pdf"
+  width="640"
+  height="360"
+  allowfullscreen>
+</iframe>
+
+ <!-- AULA 03 -->
+<h2>Aula 03 – Reforma Protestante (Parte 2): Calvinismo, Anglicanismo e
+Contrarreforma ★★★★★ </h2>
+  
+
+                    <!-- LINK DO VIDEO -->
+<iframe
+  width="640"
+  height="360"
+  src="https://www.youtube.com/embed/fmNHWbnbgTs?si=5ncIJ1e-ItmvbM0G"
+  allowfullscreen>
+</iframe>
+  
+
+                     <!-- FICHA DE APOIO  -->
+<iframe
+  src="reforma_protestante_parte2.pdf"
+  width="640"
+  height="360"
+  allowfullscreen>
+</iframe>
+
+
+   <!-- AULA 04 -->
+<h2>Aula 04 – Monarquias Nacionais, Absolutismo e Mercantilismo ★★★☆☆</h2>
+  
+
+                    <!-- LINK DO VIDEO -->
+<iframe
+  width="640"
+  height="360"
+  src="https://www.youtube.com/embed/pUFsDf7m_0U?si=dssVOAztF6s1duFK"
+  allowfullscreen>
+</iframe>
+  
+
+                     <!-- FICHA DE APOIO  -->
+<iframe
+  src="formação_monarquias.pdf"
+  width="640"
+  height="360"
+  allowfullscreen>
+</iframe>
+
+ <!-- AULA 05 -->
+<h2>Aula 05 – Revoluções Inglesas do século XVII ★☆☆☆☆ </h2>
+  
+
+                    <!-- LINK DO VIDEO -->
+<iframe
+  width="640"
+  height="360"
+  src="https://www.youtube.com/embed/vjUjps-C75M?si=R9_0zDNbd8BuWa8V"
+  allowfullscreen>
+</iframe>
+  
+
+            
+ <!-- AULA 06 -->
+<h2>Aula 06 – Revolução Industrial ★★★★★</h2>
+  
+
+                    <!-- LINK DO VIDEO -->
+<iframe
+  width="640"
+  height="360"
+  src="https://www.youtube.com/embed/a3xNK_o4CF8?si=_pRBM8GDUKsJ_woN"
+  allowfullscreen>
+</iframe>
+  
+
+                     <!-- FICHA DE APOIO  -->
+<iframe
+  src="revolução_industrial.pdf"
+  width="640"
+  height="360"
+  allowfullscreen>
+</iframe>
+
+
+ <!-- AULA 07 -->
+<h2>Aula 07 – Iluminismo, Fisiocracia e Liberalismo ★★★★☆</h2>
+  
+
+                    <!-- LINK DO VIDEO -->
+<iframe
+  width="640"
+  height="360"
+  src="https://www.youtube.com/embed/oIE-iWpFce8?si=QprO7j3u8X_HPUxr"
+  allowfullscreen>
+</iframe>
+  
+
+                     <!-- FICHA DE APOIO  -->
+<iframe
+  src="iluminismo.pdf"
+  width="640"
+  height="360"
+  allowfullscreen>
+</iframe>
+
+ <!-- AULA 08 -->
+<h2>Aula 08 – Independência dos Estados Unidos ★★★☆☆ </h2>
+  
+
+                    <!-- LINK DO VIDEO -->
+<iframe
+  width="640"
+  height="360"
+  src="https://www.youtube.com/embed/y9UZ2il-pNg?si=ibA6UdD5Wzom3Hdu"
+  allowfullscreen>
+</iframe>
+  
+
+                     <!-- FICHA DE APOIO  -->
+<iframe
+  src="independência_EUA.pdf"
+  width="640"
+  height="360"
+  allowfullscreen>
+</iframe>
+
+ 
+  
+<br>
+              <!-- MARCAR SE ASSISTIU A AULA -->
+<label>
+  <input type="checkbox" id="red_2025_mod2_aula1">
+  Aula assistida
+</label>
+
+<button onclick="location.href='#aula2'">
+Próxima aula →
+</button>
+
+<label>
+  <input type="checkbox" id="red__2025_mod2_aula2">
+  Aula assistida
+</label>
+
+<p><a href="redacao_2025.html">⬅ Voltar aos módulos</a></p>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  function salvar(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    localStorage.setItem(id, el.checked);
+  }
+
+  function carregar(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.checked = localStorage.getItem(id) === "true";
+  }
+
+  carregar("red_mod2_aula1");
+  carregar("red_mod2_aula2");
+
+  const el1 = document.getElementById("red_2025_mod2_aula1");
+  if (el1) el1.addEventListener("change", () => salvar("red_2025_mod2_aula1"));
+
+  const el2 = document.getElementById("red_mod2_aula2");
+  if (el2) el2.addEventListener("change", () => salvar("red_2025_mod2_aula2"));
+});
+</script>
+
+</body>
+</html>
