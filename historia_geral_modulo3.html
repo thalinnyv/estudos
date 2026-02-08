@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>MÓDULO 03 – IDADE MÉDIA</title>
+</head>
+<body>
+
+<h1>MÓDULO 03 – IDADE MÉDIA</h1>
+
+
+  
+                   <!-- AULA 01 -->
+<h2>Aula 01 – Alta Idade Média Ocidental ★★★★☆</h2>
+  
+
+                    <!-- LINK DO VIDEO -->
+<iframe
+  width="640"
+  height="360"
+  src="https://www.youtube.com/embed/fQ4mSdJLLH0?si=dXMVL1zyU_rf4sck"
+  allowfullscreen>
+</iframe>
+  
+
+                     <!-- FICHA DE APOIO  -->
+<iframe
+  src="alta_Idade.pdf"
+  width="640"
+  height="360"
+  allowfullscreen>
+</iframe>
+
+ <!-- AULA 02 -->
+<h2>Aula 02 – Baixa Idade Média Ocidental ★★★★☆ </h2>
+  
+
+                    <!-- LINK DO VIDEO -->
+<iframe
+  width="640"
+  height="360"
+  src="https://www.youtube.com/embed/Yq39MeChUlw?si=wkbO6sAcnn75K_2Z"
+  allowfullscreen>
+</iframe>
+  
+
+                     <!-- FICHA DE APOIO  -->
+<iframe
+  src="baixa_idade.pdf"
+  width="640"
+  height="360"
+  allowfullscreen>
+</iframe>
+
+ <!-- AULA 03 -->
+<h2>Aula 03 – Civilização Islâmica ★★★★☆</h2>
+  
+
+                    <!-- LINK DO VIDEO -->
+<iframe
+  width="640"
+  height="360"
+  src="https://www.youtube.com/embed/v5C0eKRmgnw?si=A-ZcVLaFoT6paPvD"
+  allowfullscreen>
+</iframe>
+  
+
+                     <!-- FICHA DE APOIO  -->
+<iframe
+  src="civilização_islâmica.pdf"
+  width="640"
+  height="360"
+  allowfullscreen>
+</iframe>
+
+
+   <!-- AULA 04 -->
+<h2>Aula 04 – Civilização Bizantina ★☆☆☆☆ </h2>
+  
+
+                    <!-- LINK DO VIDEO -->
+<iframe
+  width="640"
+  height="360"
+  src="https://www.youtube.com/embed/v5C0eKRmgnw?si=DsPpjnwtcgqp79Wc"
+  allowfullscreen>
+</iframe>
+  
+
+                     <!-- FICHA DE APOIO  -->
+<iframe
+  src="civilização_bizantina.pdf"
+  width="640"
+  height="360"
+  allowfullscreen>
+</iframe>
+
+  
+  
+<br>
+              <!-- MARCAR SE ASSISTIU A AULA -->
+<label>
+  <input type="checkbox" id="red_2025_mod2_aula1">
+  Aula assistida
+</label>
+
+<button onclick="location.href='#aula2'">
+Próxima aula →
+</button>
+
+<label>
+  <input type="checkbox" id="red__2025_mod2_aula2">
+  Aula assistida
+</label>
+
+<p><a href="redacao_2025.html">⬅ Voltar aos módulos</a></p>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  function salvar(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    localStorage.setItem(id, el.checked);
+  }
+
+  function carregar(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.checked = localStorage.getItem(id) === "true";
+  }
+
+  carregar("red_mod2_aula1");
+  carregar("red_mod2_aula2");
+
+  const el1 = document.getElementById("red_2025_mod2_aula1");
+  if (el1) el1.addEventListener("change", () => salvar("red_2025_mod2_aula1"));
+
+  const el2 = document.getElementById("red_mod2_aula2");
+  if (el2) el2.addEventListener("change", () => salvar("red_2025_mod2_aula2"));
+});
+</script>
+
+</body>
+</html>
