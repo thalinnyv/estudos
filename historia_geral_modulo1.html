@@ -4,64 +4,23 @@
   <meta charset="UTF-8">
   <title>MÓDULO 01 – INTRODUÇÃO AOS ESTUDOS HISTÓRICOS</title>
 </head>
+
 <body>
 
 <h1>MÓDULO 01 – INTRODUÇÃO AOS ESTUDOS HISTÓRICOS</h1>
 
-
-  
-                   <!-- AULA 01 -->
+<!-- AULA 01 -->
 <h2>Aula 01 – Os Fundamentos da História ★★★★★</h2>
-  
 
-                    <!-- LINK DO VIDEO -->
-<iframe
-  width="640"
-  height="360"
-  src="https://www.youtube.com/embed/2Gj1x-a1IFk?si=8MUTWmkjW4OfxHSq"
-  allowfullscreen>
-</iframe>
-  
+<iframe width="640" height="360"
+src="https://www.youtube.com/embed/2Gj1x-a1IFk"
+allowfullscreen></iframe>
 
-                     <!-- FICHA DE APOIO  -->
-<iframe
-  src="fundamentos_da_História.pdf"
-  width="640"
-  height="360"
-  allowfullscreen>
-</iframe>
+<iframe width="640" height="360"
+src="fundamentos_da_historia.pdf"></iframe>
 
- <!-- AULA 02 -->
-<h2>Aula 02 –  Pré-História ★☆☆☆☆</h2>
-  
-
-                    <!-- LINK DO VIDEO -->
-<iframe
-  width="640"
-  height="360"
-  src="https://www.youtube.com/embed/2U0lkFSf2_w?si=IM-c7XVXvaNNbCtG"
-  allowfullscreen>
-</iframe>
-  
-
-                     <!-- FICHA DE APOIO  -->
-<iframe
-  src="pré-História.pdf"
-  width="640"
-  height="360"
-  allowfullscreen>
-</iframe>
-
- 
-
-
-
-  
-  
-<br>
-              <!-- MARCAR SE ASSISTIU A AULA -->
 <label>
-  <input type="checkbox" id="red_2025_mod2_aula1">
+  <input type="checkbox" id="hist_aula1">
   Aula assistida
 </label>
 
@@ -69,31 +28,43 @@
 Próxima aula →
 </button>
 
-<p><a href="redacao_2025.html">⬅ Voltar aos módulos</a></p>
+<hr>
+
+<!-- AULA 02 -->
+<h2 id="aula2">Aula 02 – Pré-História ★☆☆☆☆</h2>
+
+<iframe width="640" height="360"
+src="https://www.youtube.com/embed/2U0lkFSf2_w"
+allowfullscreen></iframe>
+
+<iframe width="640" height="360"
+src="pre_historia.pdf"></iframe>
+
+<label>
+  <input type="checkbox" id="hist_aula2">
+  Aula assistida
+</label>
+
+<p><a href="historia.html">⬅ Voltar aos módulos</a></p>
 
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-  function salvar(id) {
-    const el = document.getElementById(id);
-    if (!el) return;
-    localStorage.setItem(id, el.checked);
-  }
+function salvar(id) {
+  localStorage.setItem(id, document.getElementById(id).checked);
+}
 
-  function carregar(id) {
-    const el = document.getElementById(id);
-    if (!el) return;
-    el.checked = localStorage.getItem(id) === "true";
-  }
+function carregar(id) {
+  document.getElementById(id).checked =
+    localStorage.getItem(id) === "true";
+}
 
-  carregar("red_mod2_aula1");
-  carregar("red_mod2_aula2");
+carregar("hist_aula1");
+carregar("hist_aula2");
 
-  const el1 = document.getElementById("red_2025_mod2_aula1");
-  if (el1) el1.addEventListener("change", () => salvar("red_2025_mod2_aula1"));
+document.getElementById("hist_aula1")
+  .addEventListener("change", () => salvar("hist_aula1"));
 
-  const el2 = document.getElementById("red_mod2_aula2");
-  if (el2) el2.addEventListener("change", () => salvar("red_2025_mod2_aula2"));
-});
+document.getElementById("hist_aula2")
+  .addEventListener("change", () => salvar("hist_aula2"));
 </script>
 
 </body>
