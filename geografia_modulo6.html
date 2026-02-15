@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>MÓDULO 06 – GEOGRAFIA AGRÁRIA e REGIONALIZAÇÃO</title>
+</head>
+<body>
+
+<h1>MÓDULO 06 – GEOGRAFIA AGRÁRIA e REGIONALIZAÇÃO</h1>
+
+
+  
+                   <!-- AULA 01 -->
+<h2>Aula 01 – A Industrialização da Agricultura e a Produção Agropecuária no Brasil ★★★★☆</h2>
+  
+
+                    <!-- LINK DO VIDEO -->
+<iframe
+  width="640"
+  height="360"
+  src="https://www.youtube.com/embed/KLagm9XY224?si=o0CcEWtTvWiKYWRH"
+  allowfullscreen>
+</iframe>
+  
+
+                     <!-- FICHA DE APOIO  -->
+<iframe
+  src="industrialização_Agricultura.pdf"
+  width="640"
+  height="360"
+  allowfullscreen>
+</iframe>
+
+ <!-- AULA 02 -->
+<h2>Aula 02 – Questão Agrária ★★★★☆ </h2>
+  
+
+                    <!-- LINK DO VIDEO -->
+<iframe
+  width="640"
+  height="360"
+  src="https://www.youtube.com/embed/wSwX7cgcdLU?si=16FtvGsKrJw26-QR"
+  allowfullscreen>
+</iframe>
+  
+
+                     <!-- FICHA DE APOIO  -->
+<iframe
+  src="questão_Agrária.pdf"
+  width="640"
+  height="360"
+  allowfullscreen>
+</iframe>
+
+ <!-- AULA 03 -->
+<h2>Aula 03 – A Questão Agrária: Fronteira Agrícola e Conflitos no Campo ★★★★☆</h2>
+  
+
+                    <!-- LINK DO VIDEO -->
+<iframe
+  width="640"
+  height="360"
+  src="https://www.youtube.com/embed/RoUXiB73PyI?si=bnIGPHfK4w_0rM3R"
+  allowfullscreen>
+</iframe>
+  
+
+                     <!-- FICHA DE APOIO  -->
+<iframe
+  src="questão_Agrária.pdf"
+  width="640"
+  height="360"
+  allowfullscreen>
+</iframe>
+
+
+   <!-- AULA 04 -->
+<h2>Aula 04 – A Questão Indígena no Brasil </h2>
+  
+
+                    <!-- LINK DO VIDEO -->
+<iframe
+  width="640"
+  height="360"
+  src="https://www.youtube.com/embed/MVrnBrVLKgs?si=wRsb37H9WaN4Enkh"
+  allowfullscreen>
+</iframe>
+  
+
+                     <!-- FICHA DE APOIO  -->
+<iframe
+  src="questão_Agrária.pdf"
+  width="640"
+  height="360"
+  allowfullscreen>
+</iframe>
+
+ <!-- AULA 05 -->
+<h2>Aula 05 – A Organização do Estado Brasileiro ★★☆☆☆ </h2>
+  
+
+                    <!-- LINK DO VIDEO -->
+<iframe
+  width="640"
+  height="360"
+  src="https://www.youtube.com/embed/bN5yb4JT1Jc?si=z5ctOQ6BeSVUmEdD"
+  allowfullscreen>
+</iframe>
+  
+
+                     <!-- FICHA DE APOIO  -->
+<iframe
+  src="organização_Brasileiro.pdf"
+  width="640"
+  height="360"
+  allowfullscreen>
+</iframe>
+
+ <!-- AULA 06 -->
+<h2>Aula 06 – Geografia Cultural ★☆☆☆☆</h2>
+  
+
+                    <!-- LINK DO VIDEO -->
+<iframe
+  width="640"
+  height="360"
+  src="https://www.youtube.com/embed/Ez20q_aK6gM?si=ENxwTyZtET_ubhyp"
+  allowfullscreen>
+</iframe>
+  
+
+                     <!-- FICHA DE APOIO  -->
+<iframe
+  src="geografia_Cultural.pdf"
+  width="640"
+  height="360"
+  allowfullscreen>
+</iframe>
+
+
+  
+<br>
+              <!-- MARCAR SE ASSISTIU A AULA -->
+<label>
+  <input type="checkbox" id="red_2025_mod2_aula1">
+  Aula assistida
+</label>
+
+<button onclick="location.href='#aula2'">
+Próxima aula →
+</button>
+
+<label>
+  <input type="checkbox" id="red__2025_mod2_aula2">
+  Aula assistida
+</label>
+
+<p><a href="redacao_2025.html">⬅ Voltar aos módulos</a></p>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  function salvar(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    localStorage.setItem(id, el.checked);
+  }
+
+  function carregar(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.checked = localStorage.getItem(id) === "true";
+  }
+
+  carregar("red_mod2_aula1");
+  carregar("red_mod2_aula2");
+
+  const el1 = document.getElementById("red_2025_mod2_aula1");
+  if (el1) el1.addEventListener("change", () => salvar("red_2025_mod2_aula1"));
+
+  const el2 = document.getElementById("red_mod2_aula2");
+  if (el2) el2.addEventListener("change", () => salvar("red_2025_mod2_aula2"));
+});
+</script>
+
+</body>
+</html>
