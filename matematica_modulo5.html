@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>MÓDULO 05 –  GEOMETRIA ESPACIAL E ANALÍTICA</title>
+</head>
+<body>
+
+<h1>MÓDULO 05 –  GEOMETRIA ESPACIAL E ANALÍTICA</h1>
+
+
+  
+                   <!-- AULA 01 -->
+<h2>Aula 01 – Reta e planos no espaço e projeções ortogonais ★★☆☆☆</h2>
+  
+
+                    <!-- LINK DO VIDEO -->
+<iframe
+  width="640"
+  height="360"
+  src="https://www.youtube.com/embed/1HbFrm-I-AQ?si=Al5zyYUcemAYvBlw"
+  allowfullscreen>
+</iframe>
+  
+
+                     <!-- FICHA DE APOIO  -->
+<iframe
+  src="Geometria_Espacial_Retas_e_Planos_no_Espaço_e_Projeções_Ortogonais.pdf"
+  width="640"
+  height="360"
+  allowfullscreen>
+</iframe>
+
+ <!-- AULA 02 -->
+<h2>Aula 02 – Poliedros e relação de Euler ★★★☆☆</h2>
+  
+
+                    <!-- LINK DO VIDEO -->
+<iframe
+  width="640"
+  height="360"
+  src="https://www.youtube.com/embed/3MDUNn5m8yg?si=m0ejfXoOT6NBQ7j9"
+  allowfullscreen>
+</iframe>
+  
+
+    
+ <!-- AULA 03 -->
+<h2>Aula 03 – Prismas, cilindro e esfera ★★★★★</h2>
+  
+
+                    <!-- LINK DO VIDEO -->
+<iframe
+  width="640"
+  height="360"
+  src="https://www.youtube.com/embed/AnfFsp6ca4w?si=ZlAQWBx1Q0ZpwaCU"
+  allowfullscreen>
+</iframe>
+  
+
+                     <!-- FICHA DE APOIO  -->
+<iframe
+  src="Geometria_Espacial_Prismas_Cilindros_e_Esferas.pdf"
+  width="640"
+  height="360"
+  allowfullscreen>
+</iframe>
+
+
+   <!-- AULA 04 -->
+<h2>Aula 04 –  Pirâmides, cones e proporcionalidade entre sólidos ★★★★★ </h2>
+  
+
+                    <!-- LINK DO VIDEO -->
+<iframe
+  width="640"
+  height="360"
+  src="https://www.youtube.com/embed/4Ho4cXX7_OU?si=vQk3RZUl0dEB3oik"
+  allowfullscreen>
+</iframe>
+  
+
+                     <!-- FICHA DE APOIO  -->
+<iframe
+  src="Geometria_Espacial_Pirâmides,_Cones_e_Proporcionalidades_entre_Sólidos.pdf"
+  width="640"
+  height="360"
+  allowfullscreen>
+</iframe>
+
+ <!-- AULA 05 -->
+<h2>Aula 05 –  Revisão volume ★★★★★</h2>
+  
+
+                    <!-- LINK DO VIDEO -->
+<iframe
+  width="640"
+  height="360"
+  src="https://www.youtube.com/embed/4vjnBeB57ho?si=EEXSPpnDdK5eHmzs"
+  allowfullscreen>
+</iframe>
+  
+ <!-- AULA 06 -->
+<h2>Aula 06 – Revisão geometria de posição ★★★☆☆</h2>
+  
+
+                    <!-- LINK DO VIDEO -->
+<iframe
+  width="640"
+  height="360"
+  src="https://www.youtube.com/embed/gwcWl3TK1A8?si=f5atIG4SaGpkMJJa"
+  allowfullscreen>
+</iframe>
+  
+
+                     <!-- FICHA DE APOIO  -->
+<iframe
+  src="REVISÃo_GEOMETRIA_PLANA.pdf"
+  width="640"
+  height="360"
+  allowfullscreen>
+</iframe>
+
+
+ <!-- AULA 07 -->
+<h2>Aula 07 – Geometria analítica: estudo da circunferência ★★★☆☆</h2>
+  
+
+                    <!-- LINK DO VIDEO -->
+<iframe
+  width="640"
+  height="360"
+  src="https://www.youtube.com/embed/vOg_Y9sFVGs?si=dNjUhGYyfoZEaVkh"
+  allowfullscreen>
+</iframe>
+  
+
+                     <!-- FICHA DE APOIO  -->
+<iframe
+  src="Geometria_Analítica_Estudo_da_Circunferência.pdf"
+  width="640"
+  height="360"
+  allowfullscreen>
+</iframe>
+
+  
+<br>
+              <!-- MARCAR SE ASSISTIU A AULA -->
+<label>
+  <input type="checkbox" id="red_2025_mod2_aula1">
+  Aula assistida
+</label>
+
+<button onclick="location.href='#aula2'">
+Próxima aula →
+</button>
+
+<label>
+  <input type="checkbox" id="red__2025_mod2_aula2">
+  Aula assistida
+</label>
+
+<p><a href="redacao_2025.html">⬅ Voltar aos módulos</a></p>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  function salvar(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    localStorage.setItem(id, el.checked);
+  }
+
+  function carregar(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.checked = localStorage.getItem(id) === "true";
+  }
+
+  carregar("red_mod2_aula1");
+  carregar("red_mod2_aula2");
+
+  const el1 = document.getElementById("red_2025_mod2_aula1");
+  if (el1) el1.addEventListener("change", () => salvar("red_2025_mod2_aula1"));
+
+  const el2 = document.getElementById("red_mod2_aula2");
+  if (el2) el2.addEventListener("change", () => salvar("red_2025_mod2_aula2"));
+});
+</script>
+
+</body>
+</html>
