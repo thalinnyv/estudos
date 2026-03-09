@@ -1,11 +1,26 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html>
 <head>
+
 <meta charset="UTF-8">
 <title>MÓDULO 02 – TABELA DO ENEM</title>
 
 <link rel="stylesheet" href="style.css">
+
+<style>
+
+.conteudo{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+margin-bottom:10px;
+}
+
+.checks{
+margin-bottom:40px;
+}
+
+</style>
 
 </head>
 
@@ -17,45 +32,175 @@
 
 
 <!-- COMPETÊNCIA 1 -->
-<div class="aula">
-
 <h3>Competência 1</h3>
 
 <div class="conteudo">
 
-<iframe
-width="640"
-height="360"
+<iframe width="640" height="360"
 src="https://www.youtube.com/embed/3xkhapUr2L0?si=Z5V3piUH2AjZUO3g"
-allowfullscreen>
-</iframe>
+allowfullscreen></iframe>
 
 <iframe
 src="Ficha_de_Apoio_Competências_da_Redação_do_Enem.pdf"
 width="640"
 height="360"
-allowfullscreen>
-</iframe>
+allowfullscreen></iframe>
 
 </div>
 
-<label>
-<input type="checkbox" id="red_mod2_aula1">
-Aula assistida
-</label>
+<div class="checks">
+
+<label><input type="checkbox" id="c1_a"> Aula assistida</label><br>
+<label><input type="checkbox" id="c1_r"> Revisão</label><br>
+<label><input type="checkbox" id="c1_e"> Exercício</label>
 
 </div>
 
 
 
 <!-- COMPETÊNCIA 2 -->
-<div class="aula">
-
 <h3>Competência 2</h3>
 
 <div class="conteudo">
 
+<iframe width="640" height="360"
+src="https://www.youtube.com/embed/Q7Op-k24IUs?si=S1ZoSFfTY4aUPeI5"
+allowfullscreen></iframe>
+
 <iframe
+src="Ficha_de_Apoio_Competências_da_Redação_do_Enem.pdf"
 width="640"
 height="360"
-src="https://www.youtube.com/embed/Q7Op-k24IUs?si=S1ZoSFfTY4aUPeI
+allowfullscreen></iframe>
+
+</div>
+
+<div class="checks">
+
+<label><input type="checkbox" id="c2_a"> Aula assistida</label><br>
+<label><input type="checkbox" id="c2_r"> Revisão</label><br>
+<label><input type="checkbox" id="c2_e"> Exercício</label>
+
+</div>
+
+
+
+<!-- COMPETÊNCIA 3 -->
+<h3>Competência 3</h3>
+
+<div class="conteudo">
+
+<iframe width="640" height="360"
+src="https://www.youtube.com/embed/Upq5dPrRI3M?si=LKO6gUCvkGB0Jsug"
+allowfullscreen></iframe>
+
+<iframe
+src="Ficha_de_Apoio_Competências_da_Redação_do_Enem.pdf"
+width="640"
+height="360"
+allowfullscreen></iframe>
+
+</div>
+
+<div class="checks">
+
+<label><input type="checkbox" id="c3_a"> Aula assistida</label><br>
+<label><input type="checkbox" id="c3_r"> Revisão</label><br>
+<label><input type="checkbox" id="c3_e"> Exercício</label>
+
+</div>
+
+
+
+<!-- COMPETÊNCIA 4 -->
+<h3>Competência 4</h3>
+
+<div class="conteudo">
+
+<iframe width="640" height="360"
+src="https://www.youtube.com/embed/6gpCzpE2F5I?si=QVjuMBF1H3yMDEsS"
+allowfullscreen></iframe>
+
+<iframe
+src="Ficha_de_Apoio_Competências_da_Redação_do_Enem.pdf"
+width="640"
+height="360"
+allowfullscreen></iframe>
+
+</div>
+
+<div class="checks">
+
+<label><input type="checkbox" id="c4_a"> Aula assistida</label><br>
+<label><input type="checkbox" id="c4_r"> Revisão</label><br>
+<label><input type="checkbox" id="c4_e"> Exercício</label>
+
+</div>
+
+
+
+<!-- COMPETÊNCIA 5 -->
+<h3>Competência 5</h3>
+
+<div class="conteudo">
+
+<iframe width="640" height="360"
+src="https://www.youtube.com/embed/gcMJLrsUu-E?si=XRsDfCFocdG0z7Wr"
+allowfullscreen></iframe>
+
+<iframe
+src="Ficha_de_Apoio_Competências_da_Redação_do_Enem.pdf"
+width="640"
+height="360"
+allowfullscreen></iframe>
+
+</div>
+
+<div class="checks">
+
+<label><input type="checkbox" id="c5_a"> Aula assistida</label><br>
+<label><input type="checkbox" id="c5_r"> Revisão</label><br>
+<label><input type="checkbox" id="c5_e"> Exercício</label>
+
+</div>
+
+
+<p><a href="redacao_2024.html">Voltar aos módulos</a></p>
+
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+const ids = [
+
+"c1_a","c1_r","c1_e",
+"c2_a","c2_r","c2_e",
+"c3_a","c3_r","c3_e",
+"c4_a","c4_r","c4_e",
+"c5_a","c5_r","c5_e"
+
+];
+
+ids.forEach(id=>{
+
+const el=document.getElementById(id)
+
+if(localStorage.getItem(id)==="true"){
+el.checked=true
+}
+
+el.addEventListener("change",function(){
+localStorage.setItem(id,el.checked)
+})
+
+})
+
+})
+
+</script>
+
+
+</body>
+</html>
