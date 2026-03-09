@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Acesso ao site</title>
+<style>
+body{
+font-family: Arial;
+background:#111;
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+.caixa{
+background:#222;
+padding:40px;
+border-radius:10px;
+text-align:center;
+}
+input{
+padding:10px;
+margin:10px;
+}
+button{
+padding:10px 20px;
+}
+</style>
+
+<script>
+function entrar(){
+const senha=document.getElementById("senha").value;
+
+if(senha==="16312816"){
+localStorage.setItem("acesso","ok");
+window.location.href="index.html";
+}else{
+alert("Senha incorreta");
+}
+}
+</script>
+</head>
+
+<body>
+
+<div class="caixa">
+<h1>Área de estudos</h1>
+<p>Digite a senha</p>
+
+<input type="password" id="senha">
+<br>
+<button onclick="entrar()">Entrar</button>
+</div>
+
+</body>
+</html>
