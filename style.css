@@ -32,8 +32,18 @@ text-decoration:none;
 color:white;
 font-weight:bold;
 }
-
-progress{
-width:300px;
-height:20px;
+.aula{
+margin-bottom:40px;
 }
+
+.conteudo{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.conteudo iframe{
+flex:1;
+min-width:400px;
+}
+
