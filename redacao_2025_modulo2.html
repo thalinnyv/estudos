@@ -10,28 +10,30 @@
 
 body{
 font-family: Arial;
-max-width:1100px;
+max-width:1200px;
 margin:auto;
 }
 
 .aula{
-margin-bottom:50px;
+margin-bottom:60px;
 }
 
 .video-material{
 display:flex;
 gap:20px;
-flex-wrap:wrap;
 }
 
 .video-material iframe{
-width:520px;
-height:300px;
+flex:1;
+width:100%;
+height:360px;
 }
 
-.checkbox{
+.checkboxes{
 margin-top:10px;
 font-size:18px;
+display:flex;
+gap:20px;
 }
 
 </style>
@@ -55,11 +57,14 @@ font-size:18px;
 
 </div>
 
-<div class="checkbox">
-<label>
-<input type="checkbox" id="mod2_aula1">
-Aula assistida
-</label>
+<div class="checkboxes">
+
+<label><input type="checkbox" id="mod2_aula1_video"> Aula assistida</label>
+
+<label><input type="checkbox" id="mod2_aula1_resumo"> Resumo</label>
+
+<label><input type="checkbox" id="mod2_aula1_exercicio"> Exercício</label>
+
 </div>
 
 </div>
@@ -78,11 +83,14 @@ Aula assistida
 
 </div>
 
-<div class="checkbox">
-<label>
-<input type="checkbox" id="mod2_aula2">
-Aula assistida
-</label>
+<div class="checkboxes">
+
+<label><input type="checkbox" id="mod2_aula2_video"> Aula assistida</label>
+
+<label><input type="checkbox" id="mod2_aula2_resumo"> Resumo</label>
+
+<label><input type="checkbox" id="mod2_aula2_exercicio"> Exercício</label>
+
 </div>
 
 </div>
@@ -101,11 +109,14 @@ Aula assistida
 
 </div>
 
-<div class="checkbox">
-<label>
-<input type="checkbox" id="mod2_aula3">
-Aula assistida
-</label>
+<div class="checkboxes">
+
+<label><input type="checkbox" id="mod2_aula3_video"> Aula assistida</label>
+
+<label><input type="checkbox" id="mod2_aula3_resumo"> Resumo</label>
+
+<label><input type="checkbox" id="mod2_aula3_exercicio"> Exercício</label>
+
 </div>
 
 </div>
@@ -124,11 +135,14 @@ Aula assistida
 
 </div>
 
-<div class="checkbox">
-<label>
-<input type="checkbox" id="mod2_aula4">
-Aula assistida
-</label>
+<div class="checkboxes">
+
+<label><input type="checkbox" id="mod2_aula4_video"> Aula assistida</label>
+
+<label><input type="checkbox" id="mod2_aula4_resumo"> Resumo</label>
+
+<label><input type="checkbox" id="mod2_aula4_exercicio"> Exercício</label>
+
 </div>
 
 </div>
@@ -147,11 +161,14 @@ Aula assistida
 
 </div>
 
-<div class="checkbox">
-<label>
-<input type="checkbox" id="mod2_aula5">
-Aula assistida
-</label>
+<div class="checkboxes">
+
+<label><input type="checkbox" id="mod2_aula5_video"> Aula assistida</label>
+
+<label><input type="checkbox" id="mod2_aula5_resumo"> Resumo</label>
+
+<label><input type="checkbox" id="mod2_aula5_exercicio"> Exercício</label>
+
 </div>
 
 </div>
@@ -170,11 +187,14 @@ Aula assistida
 
 </div>
 
-<div class="checkbox">
-<label>
-<input type="checkbox" id="mod2_aula6">
-Aula assistida
-</label>
+<div class="checkboxes">
+
+<label><input type="checkbox" id="mod2_aula6_video"> Aula assistida</label>
+
+<label><input type="checkbox" id="mod2_aula6_resumo"> Resumo</label>
+
+<label><input type="checkbox" id="mod2_aula6_exercicio"> Exercício</label>
+
 </div>
 
 </div>
@@ -193,11 +213,14 @@ Aula assistida
 
 </div>
 
-<div class="checkbox">
-<label>
-<input type="checkbox" id="mod2_aula7">
-Aula assistida
-</label>
+<div class="checkboxes">
+
+<label><input type="checkbox" id="mod2_aula7_video"> Aula assistida</label>
+
+<label><input type="checkbox" id="mod2_aula7_resumo"> Resumo</label>
+
+<label><input type="checkbox" id="mod2_aula7_exercicio"> Exercício</label>
+
 </div>
 
 </div>
@@ -210,27 +233,21 @@ Aula assistida
 
 document.addEventListener("DOMContentLoaded", function(){
 
-function salvar(id){
-let el=document.getElementById(id)
-localStorage.setItem(id,el.checked)
+let caixas=document.querySelectorAll("input[type=checkbox]")
+
+caixas.forEach(function(box){
+
+let id=box.id
+
+if(localStorage.getItem(id)==="true"){
+box.checked=true
 }
 
-function carregar(id){
-let el=document.getElementById(id)
-if(localStorage.getItem(id)=="true"){
-el.checked=true
-}
-}
+box.addEventListener("change",function(){
+localStorage.setItem(id,box.checked)
+})
 
-for(let i=1;i<=16;i++){
-let id="mod2_aula"+i
-let el=document.getElementById(id)
-
-if(el){
-carregar(id)
-el.addEventListener("change",()=>salvar(id))
-}
-}
+})
 
 })
 
