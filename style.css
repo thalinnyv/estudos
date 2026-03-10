@@ -39,11 +39,15 @@ margin-bottom:40px;
 .conteudo{
 display:flex;
 gap:20px;
-flex-wrap:wrap;
 }
 
-.conteudo iframe{
-flex:1;
-min-width:400px;
+.caixa{
+width:560px;
+height:315px;
 }
 
+.caixa iframe{
+width:100%;
+height:100%;
+border:none;
+}
