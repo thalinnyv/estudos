@@ -10,28 +10,30 @@
 
 body{
 font-family: Arial;
-max-width:1100px;
+max-width:1200px;
 margin:auto;
 }
 
 .aula{
-margin-bottom:50px;
+margin-bottom:60px;
 }
 
 .video-material{
 display:flex;
 gap:20px;
-flex-wrap:wrap;
 }
 
 .video-material iframe{
-width:520px;
-height:300px;
+width:100%;
+height:360px;
+flex:1;
 }
 
-.checkbox{
+.checkboxes{
 margin-top:10px;
 font-size:18px;
+display:flex;
+gap:20px;
 }
 
 </style>
@@ -60,11 +62,23 @@ src="Estrutura_textual_Estrutura_básica_do_texto_dissertativo_argumentativo_(in
 
 </div>
 
-<div class="checkbox">
+<div class="checkboxes">
+
 <label>
-<input type="checkbox" id="mod1_aula1">
+<input type="checkbox" id="mod1_aula1_video">
 Aula assistida
 </label>
+
+<label>
+<input type="checkbox" id="mod1_aula1_resumo">
+Resumo
+</label>
+
+<label>
+<input type="checkbox" id="mod1_aula1_exercicio">
+Exercício
+</label>
+
 </div>
 
 </div>
@@ -88,11 +102,23 @@ src="Estrutura_textual_Retrospectiva_ENEM_cartilha_com_os_melhores_textos_das_ú
 
 </div>
 
-<div class="checkbox">
+<div class="checkboxes">
+
 <label>
-<input type="checkbox" id="mod1_aula2">
+<input type="checkbox" id="mod1_aula2_video">
 Aula assistida
 </label>
+
+<label>
+<input type="checkbox" id="mod1_aula2_resumo">
+Resumo
+</label>
+
+<label>
+<input type="checkbox" id="mod1_aula2_exercicio">
+Exercício
+</label>
+
 </div>
 
 </div>
@@ -105,23 +131,21 @@ Aula assistida
 
 document.addEventListener("DOMContentLoaded", function(){
 
-function salvar(id){
-let el=document.getElementById(id)
-localStorage.setItem(id,el.checked)
+let caixas = document.querySelectorAll("input[type=checkbox]")
+
+caixas.forEach(function(box){
+
+let id = box.id
+
+if(localStorage.getItem(id) === "true"){
+box.checked = true
 }
 
-function carregar(id){
-let el=document.getElementById(id)
-if(localStorage.getItem(id)=="true"){
-el.checked=true
-}
-}
+box.addEventListener("change", function(){
+localStorage.setItem(id, box.checked)
+})
 
-carregar("mod1_aula1")
-carregar("mod1_aula2")
-
-document.getElementById("mod1_aula1").addEventListener("change",()=>salvar("mod1_aula1"))
-document.getElementById("mod1_aula2").addEventListener("change",()=>salvar("mod1_aula2"))
+})
 
 })
 
