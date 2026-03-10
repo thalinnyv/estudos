@@ -1,64 +1,109 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>MÓDULO 03 – MÓDULO 03 – ANÁLISE DE REDAÇÕES  </title>
+
+<meta charset="UTF-8">
+<title>MÓDULO 03 – ANÁLISE DE REDAÇÕES</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.conteudo{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+margin-bottom:10px;
+}
+
+.checks{
+margin-bottom:40px;
+}
+
+</style>
+
 </head>
+
 <body>
 
-<h1>MÓDULO 03 – MÓDULO 03 – ANÁLISE DE REDAÇÕES</h1>
+<h1>MÓDULO 03 – ANÁLISE DE REDAÇÕES</h1>
 
 
-  
-                   <!-- AULA 01 -->
-<h2>Aula 01 – Aula 01 – Análise de Redações ★★★★★ </h2>
-  
+<h2>Aula 01 – Análise de Redações ★★★★★</h2>
 
-                    <!-- LINK DO VIDEO -->
+
+<div class="conteudo">
+
 <iframe
-  width="640"
-  height="360"
-  src="https://www.youtube.com/embed/ALZucnoU7K4?si=iaDqoedyHHWdpqbH"
-  allowfullscreen>
+width="640"
+height="360"
+src="https://www.youtube.com/embed/ALZucnoU7K4?si=iaDqoedyHHWdpqbH"
+allowfullscreen>
 </iframe>
-  
 
-<br>
-              <!-- MARCAR SE ASSISTIU A AULA -->
+</div>
+
+
+<div class="checks">
+
 <label>
-  <input type="checkbox" id="red_mod3_aula1">
-  Aula assistida
+<input type="checkbox" id="m3_aula1_assistida">
+Aula assistida
 </label>
+<br>
+
+<label>
+<input type="checkbox" id="m3_aula1_revisao">
+Revisão
+</label>
+<br>
+
+<label>
+<input type="checkbox" id="m3_aula1_exercicio">
+Exercício
+</label>
+
+</div>
+
 
 <button onclick="location.href='#aula2'">
 Próxima aula →
 </button>
 
-<p><a href="redacao_2024.html">⬅ Voltar aos módulos</a></p>
+
+<p>
+<a href="redacao_2024.html">⬅ Voltar aos módulos</a>
+</p>
+
 
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-  function salvar(id) {
-    const el = document.getElementById(id);
-    if (!el) return;
-    localStorage.setItem(id, el.checked);
-  }
 
-  function carregar(id) {
-    const el = document.getElementById(id);
-    if (!el) return;
-    el.checked = localStorage.getItem(id) === "true";
-  }
+document.addEventListener("DOMContentLoaded", function(){
 
-  carregar("red_mod3_aula1");
-  carregar("red_mod3_aula2");
+const ids=[
 
-  const el1 = document.getElementById("red_mod3_aula1");
-  if (el1) el1.addEventListener("change", () => salvar("red_mod3_aula1"));
+"m3_aula1_assistida",
+"m3_aula1_revisao",
+"m3_aula1_exercicio"
 
-  const el2 = document.getElementById("red_mod3_aula2");
-  if (el2) el2.addEventListener("change", () => salvar("red_mod3_aula2"));
-});
+]
+
+ids.forEach(id=>{
+
+const el=document.getElementById(id)
+
+if(localStorage.getItem(id)==="true"){
+el.checked=true
+}
+
+el.addEventListener("change",function(){
+localStorage.setItem(id,el.checked)
+})
+
+})
+
+})
+
 </script>
 
 </body>
