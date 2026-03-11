@@ -1,72 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 <meta charset="UTF-8">
 <title>MÓDULO 01 – ORTOGRAFIA</title>
 
+<link rel="stylesheet" href="style.css">
+
 <style>
 
-body{
-font-family: Arial, sans-serif;
-background: linear-gradient(135deg,#1d4ed8,#2563eb);
-margin:0;
-padding:40px;
-}
-
-/* CAIXA BRANCA */
-.container{
-background:white;
-padding:30px;
-border-radius:12px;
-max-width:1200px;
-margin:auto;
-box-shadow:0 10px 30px rgba(0,0,0,0.2);
-}
-
-/* TÍTULO */
-h1{
-margin-bottom:40px;
-}
-
-/* BLOCO DA AULA */
-.aula{
-margin-bottom:60px;
-border-bottom:1px solid #ddd;
-padding-bottom:30px;
-}
-
-/* VIDEO + PDF */
-.video-material{
+.conteudo{
 display:flex;
 gap:20px;
 flex-wrap:wrap;
-margin-top:15px;
+margin-bottom:10px;
 }
 
-/* TAMANHO DOS IFRAMES */
-.video-material iframe{
-flex:1;
-min-width:400px;
-height:360px;
-border-radius:8px;
-}
-
-/* CHECKBOXES */
-.checkboxes{
-margin-top:15px;
-display:flex;
-flex-direction:column;
-gap:8px;
-font-size:16px;
+.checks{
+margin-bottom:40px;
 }
 
 </style>
 
 </head>
-<body>
 
-<div class="container">
+<body>
 
 <h1>MÓDULO 01 – ORTOGRAFIA</h1>
 
@@ -76,25 +33,49 @@ font-size:16px;
 
 <h2>Aula 01 – Problemas da norma culta ★★★★★</h2>
 
-<div class="video-material">
+<div class="conteudo">
 
-<iframe src="https://www.youtube.com/embed/t-lMi7WVOnc?si=zTvvhdWkl78WuY04" allowfullscreen></iframe>
+<iframe
+width="640"
+height="360"
+src="https://www.youtube.com/embed/t-lMi7WVOnc?si=zTvvhdWkl78WuY04"
+allowfullscreen>
+</iframe>
 
-<iframe src="problemas_norma_culta.pdf"></iframe>
+<iframe
+src="problemas_norma_culta.pdf"
+width="640"
+height="360"
+allowfullscreen>
+</iframe>
+
+</div>
+
+<div class="checks">
+
+<label>
+<input type="checkbox" id="aula1_video">
+Aula assistida
+</label>
+
+<br>
+
+<label>
+<input type="checkbox" id="aula1_revisao">
+Revisão
+</label>
+
+<br>
+
+<label>
+<input type="checkbox" id="aula1_exercicio">
+Exercício
+</label>
 
 </div>
 
-<div class="checkboxes">
-
-<label><input type="checkbox" id="aula1_video"> Aula assistida</label>
-
-<label><input type="checkbox" id="aula1_revisao"> Revisão</label>
-
-<label><input type="checkbox" id="aula1_exercicio"> Exercício</label>
-
 </div>
 
-</div>
 
 
 <!-- AULA 02 -->
@@ -102,25 +83,49 @@ font-size:16px;
 
 <h2>Aula 02 – Acentuação gráfica ★★★★☆</h2>
 
-<div class="video-material">
+<div class="conteudo">
 
-<iframe src="https://www.youtube.com/embed/f78PRm6tCkA?si=qgYraxcFDJeq8F8d" allowfullscreen></iframe>
+<iframe
+width="640"
+height="360"
+src="https://www.youtube.com/embed/f78PRm6tCkA?si=qgYraxcFDJeq8F8d"
+allowfullscreen>
+</iframe>
 
-<iframe src=""></iframe>
+<iframe
+src=""
+width="640"
+height="360"
+allowfullscreen>
+</iframe>
+
+</div>
+
+<div class="checks">
+
+<label>
+<input type="checkbox" id="aula2_video">
+Aula assistida
+</label>
+
+<br>
+
+<label>
+<input type="checkbox" id="aula2_revisao">
+Revisão
+</label>
+
+<br>
+
+<label>
+<input type="checkbox" id="aula2_exercicio">
+Exercício
+</label>
 
 </div>
 
-<div class="checkboxes">
-
-<label><input type="checkbox" id="aula2_video"> Aula assistida</label>
-
-<label><input type="checkbox" id="aula2_revisao"> Revisão</label>
-
-<label><input type="checkbox" id="aula2_exercicio"> Exercício</label>
-
 </div>
 
-</div>
 
 
 <!-- AULA 03 -->
@@ -128,30 +133,52 @@ font-size:16px;
 
 <h2>Aula 03 – Uso do hífen ★★☆☆☆</h2>
 
-<div class="video-material">
+<div class="conteudo">
 
-<iframe src="https://www.youtube.com/embed/4lgw1iqAqt0?si=v60_UtDV51dIaOVK" allowfullscreen></iframe>
+<iframe
+width="640"
+height="360"
+src="https://www.youtube.com/embed/4lgw1iqAqt0?si=v60_UtDV51dIaOVK"
+allowfullscreen>
+</iframe>
 
-<iframe src="uso_hífen.pdf"></iframe>
+<iframe
+src="uso_hífen.pdf"
+width="640"
+height="360"
+allowfullscreen>
+</iframe>
+
+</div>
+
+<div class="checks">
+
+<label>
+<input type="checkbox" id="aula3_video">
+Aula assistida
+</label>
+
+<br>
+
+<label>
+<input type="checkbox" id="aula3_revisao">
+Revisão
+</label>
+
+<br>
+
+<label>
+<input type="checkbox" id="aula3_exercicio">
+Exercício
+</label>
 
 </div>
 
-<div class="checkboxes">
-
-<label><input type="checkbox" id="aula3_video"> Aula assistida</label>
-
-<label><input type="checkbox" id="aula3_revisao"> Revisão</label>
-
-<label><input type="checkbox" id="aula3_exercicio"> Exercício</label>
-
 </div>
 
-</div>
 
 
 <p><a href="redacao_2025.html">⬅ Voltar aos módulos</a></p>
-
-</div>
 
 
 <script>
