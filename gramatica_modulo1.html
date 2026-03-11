@@ -8,21 +8,35 @@
 
 <style>
 
-.conteudo{
+body{
+font-family: Arial;
+max-width:1100px;
+margin:auto;
+}
+
+.aula{
+margin-bottom:50px;
+}
+
+.video-material{
 display:flex;
 gap:20px;
 flex-wrap:wrap;
-margin-bottom:10px;
 }
 
-.checks{
-margin-bottom:40px;
+.video-material iframe{
+width:520px;
+height:300px;
+}
+
+.checkbox{
+margin-top:10px;
+font-size:18px;
 }
 
 </style>
 
 </head>
-
 <body>
 
 <h1>MÓDULO 01 – ORTOGRAFIA</h1>
@@ -33,45 +47,24 @@ margin-bottom:40px;
 
 <h2>Aula 01 – Problemas da norma culta ★★★★★</h2>
 
-<div class="conteudo">
+<div class="video-material">
 
 <iframe
-width="640"
-height="360"
 src="https://www.youtube.com/embed/t-lMi7WVOnc?si=zTvvhdWkl78WuY04"
 allowfullscreen>
 </iframe>
 
 <iframe
-src="problemas_norma_culta.pdf"
-width="640"
-height="360"
-allowfullscreen>
+src="problemas_norma_culta.pdf">
 </iframe>
 
 </div>
 
-<div class="checks">
-
+<div class="checkbox">
 <label>
-<input type="checkbox" id="aula1_video">
+<input type="checkbox" id="mod1_aula1">
 Aula assistida
 </label>
-
-<br>
-
-<label>
-<input type="checkbox" id="aula1_revisao">
-Revisão
-</label>
-
-<br>
-
-<label>
-<input type="checkbox" id="aula1_exercicio">
-Exercício
-</label>
-
 </div>
 
 </div>
@@ -83,45 +76,24 @@ Exercício
 
 <h2>Aula 02 – Acentuação gráfica ★★★★☆</h2>
 
-<div class="conteudo">
+<div class="video-material">
 
 <iframe
-width="640"
-height="360"
 src="https://www.youtube.com/embed/f78PRm6tCkA?si=qgYraxcFDJeq8F8d"
 allowfullscreen>
 </iframe>
 
 <iframe
-src=""
-width="640"
-height="360"
-allowfullscreen>
+src="">
 </iframe>
 
 </div>
 
-<div class="checks">
-
+<div class="checkbox">
 <label>
-<input type="checkbox" id="aula2_video">
+<input type="checkbox" id="mod1_aula2">
 Aula assistida
 </label>
-
-<br>
-
-<label>
-<input type="checkbox" id="aula2_revisao">
-Revisão
-</label>
-
-<br>
-
-<label>
-<input type="checkbox" id="aula2_exercicio">
-Exercício
-</label>
-
 </div>
 
 </div>
@@ -133,49 +105,27 @@ Exercício
 
 <h2>Aula 03 – Uso do hífen ★★☆☆☆</h2>
 
-<div class="conteudo">
+<div class="video-material">
 
 <iframe
-width="640"
-height="360"
 src="https://www.youtube.com/embed/4lgw1iqAqt0?si=v60_UtDV51dIaOVK"
 allowfullscreen>
 </iframe>
 
 <iframe
-src="uso_hífen.pdf"
-width="640"
-height="360"
-allowfullscreen>
+src="uso_hífen.pdf">
 </iframe>
 
 </div>
 
-<div class="checks">
-
+<div class="checkbox">
 <label>
-<input type="checkbox" id="aula3_video">
+<input type="checkbox" id="mod1_aula3">
 Aula assistida
 </label>
-
-<br>
-
-<label>
-<input type="checkbox" id="aula3_revisao">
-Revisão
-</label>
-
-<br>
-
-<label>
-<input type="checkbox" id="aula3_exercicio">
-Exercício
-</label>
-
 </div>
 
 </div>
-
 
 
 <p><a href="redacao_2025.html">⬅ Voltar aos módulos</a></p>
@@ -185,21 +135,29 @@ Exercício
 
 document.addEventListener("DOMContentLoaded", function(){
 
-let caixas=document.querySelectorAll("input[type=checkbox]")
-
-caixas.forEach(function(box){
-
-let id=box.id
-
-if(localStorage.getItem(id)==="true"){
-box.checked=true
+function salvar(id){
+let el=document.getElementById(id)
+localStorage.setItem(id,el.checked)
 }
 
-box.addEventListener("change",function(){
-localStorage.setItem(id,box.checked)
-})
+function carregar(id){
+let el=document.getElementById(id)
+if(localStorage.getItem(id)=="true"){
+el.checked=true
+}
+}
 
-})
+for(let i=1;i<=3;i++){
+
+let id="mod1_aula"+i
+let el=document.getElementById(id)
+
+if(el){
+carregar(id)
+el.addEventListener("change",()=>salvar(id))
+}
+
+}
 
 })
 
