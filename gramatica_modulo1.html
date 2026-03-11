@@ -32,6 +32,9 @@ height:300px;
 .checkbox{
 margin-top:10px;
 font-size:18px;
+display:flex;
+flex-direction:column;
+gap:6px;
 }
 
 </style>
@@ -49,22 +52,29 @@ font-size:18px;
 
 <div class="video-material">
 
-<iframe
-src="https://www.youtube.com/embed/t-lMi7WVOnc?si=zTvvhdWkl78WuY04"
-allowfullscreen>
-</iframe>
+<iframe src="https://www.youtube.com/embed/t-lMi7WVOnc?si=zTvvhdWkl78WuY04" allowfullscreen></iframe>
 
-<iframe
-src="problemas_norma_culta.pdf">
-</iframe>
+<iframe src="problemas_norma_culta.pdf"></iframe>
 
 </div>
 
 <div class="checkbox">
+
 <label>
-<input type="checkbox" id="mod1_aula1">
+<input type="checkbox" id="mod1_aula1_video">
 Aula assistida
 </label>
+
+<label>
+<input type="checkbox" id="mod1_aula1_revisao">
+Revisão
+</label>
+
+<label>
+<input type="checkbox" id="mod1_aula1_exercicio">
+Exercício
+</label>
+
 </div>
 
 </div>
@@ -78,22 +88,29 @@ Aula assistida
 
 <div class="video-material">
 
-<iframe
-src="https://www.youtube.com/embed/f78PRm6tCkA?si=qgYraxcFDJeq8F8d"
-allowfullscreen>
-</iframe>
+<iframe src="https://www.youtube.com/embed/f78PRm6tCkA?si=qgYraxcFDJeq8F8d" allowfullscreen></iframe>
 
-<iframe
-src="">
-</iframe>
+<iframe src=""></iframe>
 
 </div>
 
 <div class="checkbox">
+
 <label>
-<input type="checkbox" id="mod1_aula2">
+<input type="checkbox" id="mod1_aula2_video">
 Aula assistida
 </label>
+
+<label>
+<input type="checkbox" id="mod1_aula2_revisao">
+Revisão
+</label>
+
+<label>
+<input type="checkbox" id="mod1_aula2_exercicio">
+Exercício
+</label>
+
 </div>
 
 </div>
@@ -107,22 +124,29 @@ Aula assistida
 
 <div class="video-material">
 
-<iframe
-src="https://www.youtube.com/embed/4lgw1iqAqt0?si=v60_UtDV51dIaOVK"
-allowfullscreen>
-</iframe>
+<iframe src="https://www.youtube.com/embed/4lgw1iqAqt0?si=v60_UtDV51dIaOVK" allowfullscreen></iframe>
 
-<iframe
-src="uso_hífen.pdf">
-</iframe>
+<iframe src="uso_hífen.pdf"></iframe>
 
 </div>
 
 <div class="checkbox">
+
 <label>
-<input type="checkbox" id="mod1_aula3">
+<input type="checkbox" id="mod1_aula3_video">
 Aula assistida
 </label>
+
+<label>
+<input type="checkbox" id="mod1_aula3_revisao">
+Revisão
+</label>
+
+<label>
+<input type="checkbox" id="mod1_aula3_exercicio">
+Exercício
+</label>
+
 </div>
 
 </div>
@@ -135,29 +159,21 @@ Aula assistida
 
 document.addEventListener("DOMContentLoaded", function(){
 
-function salvar(id){
-let el=document.getElementById(id)
-localStorage.setItem(id,el.checked)
+let caixas=document.querySelectorAll("input[type=checkbox]")
+
+caixas.forEach(function(box){
+
+let id=box.id
+
+if(localStorage.getItem(id)==="true"){
+box.checked=true
 }
 
-function carregar(id){
-let el=document.getElementById(id)
-if(localStorage.getItem(id)=="true"){
-el.checked=true
-}
-}
+box.addEventListener("change",function(){
+localStorage.setItem(id,box.checked)
+})
 
-for(let i=1;i<=3;i++){
-
-let id="mod1_aula"+i
-let el=document.getElementById(id)
-
-if(el){
-carregar(id)
-el.addEventListener("change",()=>salvar(id))
-}
-
-}
+})
 
 })
 
