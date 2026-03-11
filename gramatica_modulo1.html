@@ -1,169 +1,182 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MÓDULO 01 – ORTOGRAFIA</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            font-family: sans-serif;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #0000FF; /* FUNDO AZUL */
-        }
 
-        .aula {
-            background-color: #FFFFFF; /* Fundo branco para cada aula */
-            padding: 20px;
-            margin-bottom: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-        }
+<meta charset="UTF-8">
+<title>MÓDULO 01 – ORTOGRAFIA</title>
 
-        .video-material {
-            display: flex;
-            gap: 20px;
-            justify-content: space-between;
-            margin-bottom: 20px;
-        }
+<style>
 
-        .caixa {
-            flex: 1;
-            aspect-ratio: 16 / 9;
-            background-color: #eee; /* Fundo reserva caso o vídeo falhe */
-        }
+body{
+font-family: Arial, sans-serif;
+background: linear-gradient(135deg,#1d4ed8,#2563eb);
+margin:0;
+padding:40px;
+}
 
-        .caixa iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            border-radius: 4px;
-        }
+/* CAIXA BRANCA */
+.container{
+background:white;
+padding:30px;
+border-radius:12px;
+max-width:1200px;
+margin:auto;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
 
-        .checkboxes {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-top: 15px;
-        }
+/* TÍTULO */
+h1{
+margin-bottom:40px;
+}
 
-        .checkboxes label {
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-            font-size: 16px;
-            color: #000000 !important; /* TEXTO PRETO PARA FICAR VISÍVEL */
-            font-weight: bold;
-        }
+/* BLOCO DA AULA */
+.aula{
+margin-bottom:60px;
+border-bottom:1px solid #ddd;
+padding-bottom:30px;
+}
 
-        .checkboxes input {
-            margin-right: 10px;
-            width: 18px;
-            height: 18px;
-        }
+/* VIDEO + PDF */
+.video-material{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+margin-top:15px;
+}
 
-        h1 { 
-            color: #FFFFFF; /* Título do módulo em branco sobre o azul */
-            text-align: center;
-            margin-bottom: 30px;
-        }
+/* TAMANHO DOS IFRAMES */
+.video-material iframe{
+flex:1;
+min-width:400px;
+height:360px;
+border-radius:8px;
+}
 
-        h2 { 
-            color: #333; 
-            border-bottom: 2px solid #eee; 
-            padding-bottom: 10px; 
-        }
+/* CHECKBOXES */
+.checkboxes{
+margin-top:15px;
+display:flex;
+flex-direction:column;
+gap:8px;
+font-size:16px;
+}
 
-        .voltar { 
-            margin-top: 30px; 
-            display: inline-block; 
-            text-decoration: none; 
-            color: #FFFFFF; 
-            font-weight: bold;
-        }
-    </style>
+</style>
+
 </head>
 <body>
 
-    <h1>MÓDULO 01 – ORTOGRAFIA</h1>
+<div class="container">
 
-    <div class="aula">
-        <h2>Aula 01 – Problemas da norma culta ★★★★★</h2>
-        
-        <div class="video-material">
-            <div class="caixa">
-                <iframe src="https://www.youtube.com/embed/t-lMi7WVOnc?si=zTvvhdWkl78WuY04" allowfullscreen></iframe>
-            </div>
-            <div class="caixa">
-                <iframe src="problemas_norma_culta.pdf" allowfullscreen></iframe>
-            </div>
-        </div>
+<h1>MÓDULO 01 – ORTOGRAFIA</h1>
 
-        <div class="checkboxes">
-            <label><input type="checkbox" id="aula1_check1"> Aula assistida</label>
-            <label><input type="checkbox" id="aula1_check2"> Revisão</label>
-            <label><input type="checkbox" id="aula1_check3"> Exercício</label>
-        </div>
-    </div>
 
-    <div class="aula">
-        <h2>Aula 02 – Acentuação gráfica ★★★★☆</h2>
-        
-        <div class="video-material">
-            <div class="caixa">
-                <iframe src="https://www.youtube.com/embed/f78PRm6tCkA?si=qgYraxcFDJeq8F8d" allowfullscreen></iframe>
-            </div>
-            <div class="caixa">
-                <iframe src="" allowfullscreen></iframe>
-            </div>
-        </div>
+<!-- AULA 01 -->
+<div class="aula">
 
-        <div class="checkboxes">
-            <label><input type="checkbox" id="aula2_check1"> Aula assistida</label>
-            <label><input type="checkbox" id="aula2_check2"> Revisão</label>
-            <label><input type="checkbox" id="aula2_check3"> Exercício</label>
-        </div>
-    </div>
+<h2>Aula 01 – Problemas da norma culta ★★★★★</h2>
 
-    <div class="aula">
-        <h2>Aula 03 – Uso do hífen ★★☆☆☆</h2>
-        
-        <div class="video-material">
-            <div class="caixa">
-                <iframe src="https://www.youtube.com/embed/4lgw1iqAqt0?si=v60_UtDV51dIaOVK" allowfullscreen></iframe>
-            </div>
-            <div class="caixa">
-                <iframe src="uso_hífen.pdf" allowfullscreen></iframe>
-            </div>
-        </div>
+<div class="video-material">
 
-        <div class="checkboxes">
-            <label><input type="checkbox" id="aula3_check1"> Aula assistida</label>
-            <label><input type="checkbox" id="aula3_check2"> Revisão</label>
-            <label><input type="checkbox" id="aula3_check3"> Exercício</label>
-        </div>
-    </div>
+<iframe src="https://www.youtube.com/embed/t-lMi7WVOnc?si=zTvvhdWkl78WuY04" allowfullscreen></iframe>
 
-    <a href="redacao_2025.html" class="voltar">⬅ Voltar aos módulos</a>
+<iframe src="problemas_norma_culta.pdf"></iframe>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+</div>
 
-            checkboxes.forEach(checkbox => {
-                // Carregar estado salvo
-                const saved = localStorage.getItem(checkbox.id);
-                if (saved === "true") checkbox.checked = true;
+<div class="checkboxes">
 
-                // Salvar ao clicar
-                checkbox.addEventListener('change', () => {
-                    localStorage.setItem(checkbox.id, checkbox.checked);
-                });
-            });
-        });
-    </script>
+<label><input type="checkbox" id="aula1_video"> Aula assistida</label>
+
+<label><input type="checkbox" id="aula1_revisao"> Revisão</label>
+
+<label><input type="checkbox" id="aula1_exercicio"> Exercício</label>
+
+</div>
+
+</div>
+
+
+<!-- AULA 02 -->
+<div class="aula">
+
+<h2>Aula 02 – Acentuação gráfica ★★★★☆</h2>
+
+<div class="video-material">
+
+<iframe src="https://www.youtube.com/embed/f78PRm6tCkA?si=qgYraxcFDJeq8F8d" allowfullscreen></iframe>
+
+<iframe src=""></iframe>
+
+</div>
+
+<div class="checkboxes">
+
+<label><input type="checkbox" id="aula2_video"> Aula assistida</label>
+
+<label><input type="checkbox" id="aula2_revisao"> Revisão</label>
+
+<label><input type="checkbox" id="aula2_exercicio"> Exercício</label>
+
+</div>
+
+</div>
+
+
+<!-- AULA 03 -->
+<div class="aula">
+
+<h2>Aula 03 – Uso do hífen ★★☆☆☆</h2>
+
+<div class="video-material">
+
+<iframe src="https://www.youtube.com/embed/4lgw1iqAqt0?si=v60_UtDV51dIaOVK" allowfullscreen></iframe>
+
+<iframe src="uso_hífen.pdf"></iframe>
+
+</div>
+
+<div class="checkboxes">
+
+<label><input type="checkbox" id="aula3_video"> Aula assistida</label>
+
+<label><input type="checkbox" id="aula3_revisao"> Revisão</label>
+
+<label><input type="checkbox" id="aula3_exercicio"> Exercício</label>
+
+</div>
+
+</div>
+
+
+<p><a href="redacao_2025.html">⬅ Voltar aos módulos</a></p>
+
+</div>
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+let caixas=document.querySelectorAll("input[type=checkbox]")
+
+caixas.forEach(function(box){
+
+let id=box.id
+
+if(localStorage.getItem(id)==="true"){
+box.checked=true
+}
+
+box.addEventListener("change",function(){
+localStorage.setItem(id,box.checked)
+})
+
+})
+
+})
+
+</script>
 
 </body>
 </html>
