@@ -11,15 +11,15 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #0000FF; /* Fundo azul solicitado */
+            background-color: #0000FF; /* FUNDO AZUL */
         }
 
         .aula {
-            background: #fff; /* Fundo branco das caixas de aula para leitura */
+            background-color: #FFFFFF; /* Fundo branco para cada aula */
             padding: 20px;
             margin-bottom: 40px;
             border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
 
         .video-material {
@@ -32,6 +32,7 @@
         .caixa {
             flex: 1;
             aspect-ratio: 16 / 9;
+            background-color: #eee; /* Fundo reserva caso o vídeo falhe */
         }
 
         .caixa iframe {
@@ -53,16 +54,35 @@
             align-items: center;
             cursor: pointer;
             font-size: 16px;
-            color: #0000FF; /* Texto das checkboxes em azul para destacar */
+            color: #000000 !important; /* TEXTO PRETO PARA FICAR VISÍVEL */
+            font-weight: bold;
         }
 
         .checkboxes input {
             margin-right: 10px;
+            width: 18px;
+            height: 18px;
         }
 
-        h1 { color: #fff; } /* Título principal em branco para destacar do fundo */
-        h2 { color: #555; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        .voltar { margin-top: 30px; display: block; text-decoration: none; color: #fff; } /* Link voltar em branco */
+        h1 { 
+            color: #FFFFFF; /* Título do módulo em branco sobre o azul */
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h2 { 
+            color: #333; 
+            border-bottom: 2px solid #eee; 
+            padding-bottom: 10px; 
+        }
+
+        .voltar { 
+            margin-top: 30px; 
+            display: inline-block; 
+            text-decoration: none; 
+            color: #FFFFFF; 
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -82,9 +102,9 @@
         </div>
 
         <div class="checkboxes">
-            <label><input type="checkbox" id="aula1_assistida"> Aula assistida</label>
-            <label><input type="checkbox" id="aula1_revisao"> Revisão</label>
-            <label><input type="checkbox" id="aula1_exercicio"> Exercício</label>
+            <label><input type="checkbox" id="aula1_check1"> Aula assistida</label>
+            <label><input type="checkbox" id="aula1_check2"> Revisão</label>
+            <label><input type="checkbox" id="aula1_check3"> Exercício</label>
         </div>
     </div>
 
@@ -101,9 +121,9 @@
         </div>
 
         <div class="checkboxes">
-            <label><input type="checkbox" id="aula2_assistida"> Aula assistida</label>
-            <label><input type="checkbox" id="aula2_revisao"> Revisão</label>
-            <label><input type="checkbox" id="aula2_exercicio"> Exercício</label>
+            <label><input type="checkbox" id="aula2_check1"> Aula assistida</label>
+            <label><input type="checkbox" id="aula2_check2"> Revisão</label>
+            <label><input type="checkbox" id="aula2_check3"> Exercício</label>
         </div>
     </div>
 
@@ -120,9 +140,9 @@
         </div>
 
         <div class="checkboxes">
-            <label><input type="checkbox" id="aula3_assistida"> Aula assistida</label>
-            <label><input type="checkbox" id="aula3_revisao"> Revisão</label>
-            <label><input type="checkbox" id="aula3_exercicio"> Exercício</label>
+            <label><input type="checkbox" id="aula3_check1"> Aula assistida</label>
+            <label><input type="checkbox" id="aula3_check2"> Revisão</label>
+            <label><input type="checkbox" id="aula3_check3"> Exercício</label>
         </div>
     </div>
 
@@ -132,14 +152,12 @@
         document.addEventListener('DOMContentLoaded', () => {
             const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 
-            // Carrega o estado inicial do localStorage
             checkboxes.forEach(checkbox => {
-                const savedValue = localStorage.getItem(checkbox.id);
-                if (savedValue === "true") {
-                    checkbox.checked = true;
-                }
+                // Carregar estado salvo
+                const saved = localStorage.getItem(checkbox.id);
+                if (saved === "true") checkbox.checked = true;
 
-                // Adiciona o evento para salvar sempre que mudar
+                // Salvar ao clicar
                 checkbox.addEventListener('change', () => {
                     localStorage.setItem(checkbox.id, checkbox.checked);
                 });
